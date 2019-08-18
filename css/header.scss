@@ -1,0 +1,52 @@
+.header__container {
+    width: 945px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 11px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.menu__list {
+    color: #fff;
+    font-family: $ubuntu;
+    font-size: 0.812rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.menu__item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    &:after {
+        content: "";
+        width: 4px;
+        height: 4px;
+        background: #fff;
+        border-radius: 50%;
+        display: block;
+        margin-left: 15px;
+    }
+    &:last-child {
+        &::after {
+            display: none;
+            margin-right: 0;
+        }
+    }
+}
+
+.order__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

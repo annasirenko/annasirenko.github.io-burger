@@ -1,0 +1,45 @@
+.burger__content {
+    background: url('../img/texture.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 650px;
+    min-width: 1100px;
+}
+
+.burger__section {
+    position: relative;
+}
+
+.main__section-columns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__burger-image {
+    margin-right: 22px;
+}
+
+//  .main__desc {
+//      margin-left: 70px;
+//  }
+.main__desc-uppercase {
+    font-family: $gagalin;
+    color: $orange;
+    font-size: 4.0625rem;
+    font-weight: 400;
+    text-decoration: uppercase;
+    //  margin-bottom: 30px;
+    //  margin-top: 125px;
+    margin-top: 55px;
+    letter-spacing: 4px;
+    // line-height: 1;
+}
+
+.main__desc-lowercase {
+    font-family: $lifehack;
+    color: #fff;
+    font-size: 4.1rem;
+    font-weight: 500;
+    // line-height: 1;
+}

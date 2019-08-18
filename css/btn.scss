@@ -1,0 +1,42 @@
+.order__button-send {
+    font-family: $ubuntu;
+    font-size: 0.812rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 11px 17px;
+    border-radius: 4px;
+    background-color: $ginger;
+    text-transform: uppercase;
+    transition: .3s linear;
+    &:hover {
+        background-color: #c1401e;
+    }
+}
+
+.btn__scroll {
+    width: 29px;
+    height: 14px;
+    background: url('../img/arrow-scroll.png') center center / contain no-repeat;
+    display: flex;
+    justify-content: center;
+    margin-top: 82px;
+    display: block;
+    position: absolute;
+    bottom: 42px;
+    left: 49%;
+    transform: rotateX(-50%);
+}
+
+.comments-btn {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    font-family: $ubuntu;
+    background-color: $grey;
+    padding: 11px 16px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: .3s linear;
+    &:hover {
+        background-color: #1f2122;
+    }
+}
