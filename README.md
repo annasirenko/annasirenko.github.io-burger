@@ -4,4 +4,4 @@
 
 Врублевский Артур
 
-Web Middle Test
+Web Middle
