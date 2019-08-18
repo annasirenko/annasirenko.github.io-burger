@@ -24,7 +24,7 @@
 //  .main__desc {
 //      margin-left: 70px;
 //  }
-.main__desc-uppercase {
+.title {
     font-family: $gagalin;
     color: $orange;
     font-size: 4.0625rem;
@@ -37,7 +37,7 @@
     // line-height: 1;
 }
 
-.main__desc-lowercase {
+.title-lowercase {
     font-family: $lifehack;
     color: #fff;
     font-size: 4.1rem;

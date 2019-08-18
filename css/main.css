@@ -542,7 +542,7 @@ body {
 .main__burger-image {
   margin-right: 22px; }
 
-.main__desc-uppercase {
+.title {
   font-family: "Gagalin", Helvetica, sans-serif;
   color: #f9b43b;
   font-size: 4.0625rem;
@@ -552,7 +552,7 @@ body {
   margin-top: 55px;
   letter-spacing: 4px; }
 
-.main__desc-lowercase {
+.title-lowercase {
   font-family: "Lifehack", Helvetica, sans-serif;
   color: #fff;
   font-size: 4.1rem;
@@ -669,7 +669,8 @@ body {
   display: block; }
 
 .comments__block {
-  position: relative; }
+  position: relative;
+  height: 52vh; }
 
 .comments__desc {
   position: absolute;
@@ -681,7 +682,7 @@ body {
   width: 100%;
   height: 100%;
   color: #fff;
-  padding: 73px 25px;
+  padding: 50px 25px;
   -webkit-transition: .3s linear;
   -o-transition: .3s linear;
   transition: .3s linear; }
@@ -738,3 +739,6 @@ body {
 .sidemenu__link--active {
   border: solid 1px #ffffff;
   border-radius: 50%; }
+
+.order {
+  background: url("../img/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") center center/cover no-repeat; }
