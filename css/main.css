@@ -345,6 +345,25 @@ body {
   min-width: 100%;
   min-height: 100%; }
 
+.section {
+  height: 100vh;
+  min-height: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .section--non-centered {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+
+.container {
+  max-width: 940px;
+  margin: 0 auto; }
+
 @font-face {
   font-family: 'Ubuntu';
   src: url("../fonts/Ubuntu-Light.woff2") format("woff2"), url("../fonts/Ubuntu-Light.woff") format("woff");
@@ -428,49 +447,7 @@ body {
   .comments-btn:hover {
     background-color: #1f2122; }
 
-.burger__content {
-  background: url("../img/texture.jpg") no-repeat center center;
-  background-size: cover;
-  height: 100vh;
-  min-height: 650px;
-  min-width: 1100px; }
-
-.burger__section {
-  position: relative; }
-
-.main__section-columns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.main__burger-image {
-  margin-right: 22px; }
-
-.main__desc-uppercase {
-  font-family: "Gagalin", Helvetica, sans-serif;
-  color: #f9b43b;
-  font-size: 4.0625rem;
-  font-weight: 400;
-  -webkit-text-decoration: uppercase;
-  text-decoration: uppercase;
-  margin-top: 55px;
-  letter-spacing: 4px; }
-
-.main__desc-lowercase {
-  font-family: "Lifehack", Helvetica, sans-serif;
-  color: #fff;
-  font-size: 4.1rem;
-  font-weight: 500; }
-
 .header__container {
-  width: 945px;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,7 +457,9 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 11px; }
+  padding-top: 11px;
+  max-width: 940px;
+  margin: 0 auto; }
 
 .menu {
   display: -webkit-box;
@@ -538,22 +517,70 @@ body {
   -ms-flex-align: center;
   align-items: center; }
 
-.best__content {
+.burger__content {
+  min-width: 1100px;
+  -webkit-box-flex: .8;
+  -ms-flex: .8;
+  flex: .8; }
+
+.burger {
+  position: relative;
+  background: url("../img/texture.jpg") no-repeat center center;
+  background-size: cover; }
+
+.main__section-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.main__burger-image {
+  margin-right: 22px; }
+
+.main__desc-uppercase {
+  font-family: "Gagalin", Helvetica, sans-serif;
+  color: #f9b43b;
+  font-size: 4.0625rem;
+  font-weight: 400;
+  -webkit-text-decoration: uppercase;
+  text-decoration: uppercase;
+  margin-top: 55px;
+  letter-spacing: 4px; }
+
+.main__desc-lowercase {
+  font-family: "Lifehack", Helvetica, sans-serif;
+  color: #fff;
+  font-size: 4.1rem;
+  font-weight: 500; }
+
+.best {
   background: url("../img/bg.jpg") no-repeat center center;
-  background-size: cover;
-  height: 100vh;
-  min-height: 650px;
+  background-size: cover; }
+
+.best__content {
   padding-top: 114px;
-  min-width: 1100px; }
+  min-width: 1100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 .best__сol {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
 .best__item {
   display: -webkit-box;
@@ -566,7 +593,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 24%; }
+  width: 33%; }
 
 .best__main-title {
   color: #2f3234;
@@ -585,7 +612,10 @@ body {
   font-family: "Lifehack", Helvetica, sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
-  margin-bottom: 17px; }
+  margin-bottom: 17px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .best__item:nth-child(3) {
   margin-top: 8px; }
@@ -597,11 +627,9 @@ body {
   font-weight: 300;
   text-align: center;
   opacity: 0.8;
-  line-height: 25px;
-  width: 95%; }
+  line-height: 25px; }
 
 .comments {
-  min-height: 650px;
   min-width: 1100px; }
 
 .comments__list {

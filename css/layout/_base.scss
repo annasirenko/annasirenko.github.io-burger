@@ -41,3 +41,18 @@ body {
     min-width: 100%;
     min-height: 100%;
 }
+
+.section {
+    height: 100vh;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    &--non-centered {
+        justify-content: flex-start;
+    }
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}

@@ -1,13 +1,14 @@
 .burger__content {
-    background: url('../img/texture.jpg') no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-    min-height: 650px;
     min-width: 1100px;
+    // display: flex;
+    // flex-direction: column;
+    flex: .8;
 }
 
-.burger__section {
+.burger {
     position: relative;
+    background: url('../img/texture.jpg') no-repeat center center;
+    background-size: cover;
 }
 
 .main__section-columns {
