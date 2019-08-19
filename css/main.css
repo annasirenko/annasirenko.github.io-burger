@@ -364,6 +364,10 @@ body {
   max-width: 940px;
   margin: 0 auto; }
 
+img {
+  display: block;
+  max-width: 100%; }
+
 @font-face {
   font-family: 'Ubuntu';
   src: url("../fonts/Ubuntu-Light.woff2") format("woff2"), url("../fonts/Ubuntu-Light.woff") format("woff");
@@ -399,6 +403,25 @@ body {
   src: url("../fonts/Lifehack-Medium.woff2") format("woff2"), url("../fonts/Lifehack-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal; }
+
+button {
+  text-decoration: none;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent; }
+  button:focus {
+    outline: none; }
+
+.button {
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-size: 0.812rem;
+  font-weight: 500;
+  padding: 13px 13px 13px 13px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: #ffffff; }
 
 .order__button-send {
   font-family: "Ubuntu", Helvetica, sans-serif;
@@ -562,6 +585,7 @@ body {
   margin-top: 55px;
   letter-spacing: 4px; }
   .title--centered {
+    margin-bottom: 55px;
     text-align: center; }
 
 .title-lowercase {
@@ -750,11 +774,11 @@ body {
   position: relative; }
 
 .sidemenu__link:hover {
-  border: solid 1px #ffffff;
+  border: solid 1px #e45028;
   border-radius: 50%; }
 
 .sidemenu__link--active {
-  border: solid 1px #ffffff;
+  border: solid 1px #e45028;
   border-radius: 50%; }
 
 .order {
@@ -764,7 +788,10 @@ body {
 .form__elem {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
 
 .form__column {
   -webkit-box-flex: 1;
@@ -777,13 +804,17 @@ body {
 .form__row {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin-top: 20px; }
+  .form__row:first-child {
+    margin-top: 0; }
 
 .form__block {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  margin-right: 20px; }
+  margin-right: 20px;
+  display: block; }
   .form__block:last-child {
     margin-right: 0; }
 
@@ -796,3 +827,105 @@ body {
   .form__input--textarea {
     resize: none;
     height: 110px; }
+
+.form__content {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 650px; }
+
+.form__input {
+  background: #fff;
+  border-radius: 3px;
+  border: 2px solid #fff;
+  padding: 8px 21px;
+  width: 100%;
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #2f3234; }
+  .form__input--textarea {
+    resize: none;
+    height: 110px; }
+  .form__input:focus {
+    border-color: #f9b43b;
+    border-radius: 3px;
+    outline: none; }
+
+.form__block-title {
+  color: #fff;
+  font-size: 14px;
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 300;
+  margin-bottom: 7px; }
+
+.form__block--radiocheck {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.form__radio {
+  position: relative;
+  margin-bottom: 0; }
+
+.form__trueradio {
+  visibility: hidden; }
+
+.form__label--radio {
+  margin-left: 10px; }
+
+.form__fakeradio {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  background: #ffffff;
+  display: block; }
+  .form__fakeradio:before {
+    content: "";
+    height: 7px;
+    width: 7px;
+    background-color: #e45028;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto auto;
+    visibility: hidden; }
+
+.form__fakedot {
+  height: 7px;
+  width: 7px;
+  background-color: #e45028;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto auto;
+  visibility: hidden; }
+
+.form__fakeradio--checkbox {
+  border-radius: 0%;
+  height: 16px;
+  width: 16px; }
+  .form__fakeradio--checkbox:before {
+    background: url(../img/check_mark.png) no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: center center; }
+
+.form__trueradio:checked ~ .form__fakeradio:before {
+  visibility: visible; }
