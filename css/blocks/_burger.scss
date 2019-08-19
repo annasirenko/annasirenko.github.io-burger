@@ -1,8 +1,9 @@
 .burger__content {
     min-width: 1100px;
-    // display: flex;
-    // flex-direction: column;
-    flex: .8;
+    height: 100vh;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
 }
 
 .burger {
@@ -15,6 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: .8;
 }
 
 .main__burger-image {
@@ -35,6 +37,9 @@
     margin-top: 55px;
     letter-spacing: 4px;
     // line-height: 1;
+    &--centered {
+        text-align: center;
+    }
 }
 
 .title-lowercase {

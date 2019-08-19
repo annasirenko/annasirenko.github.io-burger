@@ -519,9 +519,15 @@ body {
 
 .burger__content {
   min-width: 1100px;
-  -webkit-box-flex: .8;
-  -ms-flex: .8;
-  flex: .8; }
+  height: 100vh;
+  min-height: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 .burger {
   position: relative;
@@ -537,7 +543,10 @@ body {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  -webkit-box-flex: .8;
+  -ms-flex: .8;
+  flex: .8; }
 
 .main__burger-image {
   margin-right: 22px; }
@@ -551,6 +560,8 @@ body {
   text-decoration: uppercase;
   margin-top: 55px;
   letter-spacing: 4px; }
+  .title--centered {
+    text-align: center; }
 
 .title-lowercase {
   font-family: "Lifehack", Helvetica, sans-serif;
@@ -571,7 +582,12 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100vh;
+  min-height: 650px; }
 
 .best__сol {
   list-style: none;
@@ -741,4 +757,41 @@ body {
   border-radius: 50%; }
 
 .order {
-  background: url("../img/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") center center/cover no-repeat; }
+  background: url("../img/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") center center/cover no-repeat;
+  color: #fff; }
+
+.form__elem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.form__column {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 20px; }
+  .form__column:last-child {
+    margin-right: 0; }
+
+.form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.form__block {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 20px; }
+  .form__block:last-child {
+    margin-right: 0; }
+
+.form__input {
+  background: #fff;
+  border-radius: 3px;
+  border: none;
+  padding: 8px 21px;
+  width: 100%; }
+  .form__input--textarea {
+    resize: none;
+    height: 110px; }
