@@ -345,6 +345,29 @@ body {
   min-width: 100%;
   min-height: 100%; }
 
+.section {
+  height: 100vh;
+  min-height: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .section--non-centered {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+
+.container {
+  max-width: 940px;
+  margin: 0 auto; }
+
+img {
+  display: block;
+  max-width: 100%; }
+
 @font-face {
   font-family: 'Ubuntu';
   src: url("../fonts/Ubuntu-Light.woff2") format("woff2"), url("../fonts/Ubuntu-Light.woff") format("woff");
@@ -380,6 +403,25 @@ body {
   src: url("../fonts/Lifehack-Medium.woff2") format("woff2"), url("../fonts/Lifehack-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal; }
+
+button {
+  text-decoration: none;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent; }
+  button:focus {
+    outline: none; }
+
+.button {
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-size: 0.812rem;
+  font-weight: 500;
+  padding: 13px 13px 13px 13px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: #ffffff; }
 
 .order__button-send {
   font-family: "Ubuntu", Helvetica, sans-serif;
@@ -428,49 +470,7 @@ body {
   .comments-btn:hover {
     background-color: #1f2122; }
 
-.burger__content {
-  background: url("../img/texture.jpg") no-repeat center center;
-  background-size: cover;
-  height: 100vh;
-  min-height: 650px;
-  min-width: 1100px; }
-
-.burger__section {
-  position: relative; }
-
-.main__section-columns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.main__burger-image {
-  margin-right: 22px; }
-
-.main__desc-uppercase {
-  font-family: "Gagalin", Helvetica, sans-serif;
-  color: #f9b43b;
-  font-size: 4.0625rem;
-  font-weight: 400;
-  -webkit-text-decoration: uppercase;
-  text-decoration: uppercase;
-  margin-top: 55px;
-  letter-spacing: 4px; }
-
-.main__desc-lowercase {
-  font-family: "Lifehack", Helvetica, sans-serif;
-  color: #fff;
-  font-size: 4.1rem;
-  font-weight: 500; }
-
 .header__container {
-  width: 945px;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,7 +480,9 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 11px; }
+  padding-top: 11px;
+  max-width: 940px;
+  margin: 0 auto; }
 
 .menu {
   display: -webkit-box;
@@ -538,22 +540,88 @@ body {
   -ms-flex-align: center;
   align-items: center; }
 
-.best__content {
-  background: url("../img/bg.jpg") no-repeat center center;
-  background-size: cover;
+.burger__content {
+  min-width: 1100px;
   height: 100vh;
   min-height: 650px;
-  padding-top: 114px;
-  min-width: 1100px; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-bottom: 20px; }
+
+.burger {
+  position: relative;
+  background: url("../img/texture.jpg") no-repeat center center;
+  background-size: cover; }
+
+.main__section-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: .8;
+  -ms-flex: .8;
+  flex: .8; }
+
+.main__burger-image {
+  margin-right: 22px; }
+
+.title {
+  font-family: "Gagalin", Helvetica, sans-serif;
+  color: #f9b43b;
+  font-size: 4.0625rem;
+  font-weight: 400;
+  -webkit-text-decoration: uppercase;
+  text-decoration: uppercase;
+  margin-top: 55px;
+  letter-spacing: 4px; }
+  .title--centered {
+    margin-bottom: 55px;
+    text-align: center; }
+
+.title-lowercase {
+  font-family: "Lifehack", Helvetica, sans-serif;
+  color: #fff;
+  font-size: 4.1rem;
+  font-weight: 500; }
+
+.best {
+  background: url("../img/bg.jpg") no-repeat center center;
+  background-size: cover; }
+
+.best__content {
+  padding-bottom: 30px;
+  min-width: 1100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100vh;
+  min-height: 650px; }
 
 .best__сol {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
 .best__item {
   display: -webkit-box;
@@ -566,7 +634,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 24%; }
+  width: 33%; }
 
 .best__main-title {
   color: #2f3234;
@@ -585,7 +653,10 @@ body {
   font-family: "Lifehack", Helvetica, sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
-  margin-bottom: 17px; }
+  margin-bottom: 17px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .best__item:nth-child(3) {
   margin-top: 8px; }
@@ -597,11 +668,9 @@ body {
   font-weight: 300;
   text-align: center;
   opacity: 0.8;
-  line-height: 25px;
-  width: 95%; }
+  line-height: 25px; }
 
 .comments {
-  min-height: 650px;
   min-width: 1100px; }
 
 .comments__list {
@@ -641,7 +710,8 @@ body {
   display: block; }
 
 .comments__block {
-  position: relative; }
+  position: relative;
+  height: 52vh; }
 
 .comments__desc {
   position: absolute;
@@ -653,7 +723,7 @@ body {
   width: 100%;
   height: 100%;
   color: #fff;
-  padding: 73px 25px;
+  padding: 50px 25px;
   -webkit-transition: .3s linear;
   -o-transition: .3s linear;
   transition: .3s linear; }
@@ -704,9 +774,158 @@ body {
   position: relative; }
 
 .sidemenu__link:hover {
-  border: solid 1px #ffffff;
+  border: solid 1px #e45028;
   border-radius: 50%; }
 
 .sidemenu__link--active {
-  border: solid 1px #ffffff;
+  border: solid 1px #e45028;
   border-radius: 50%; }
+
+.order {
+  background: url("../img/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg") center center/cover no-repeat;
+  color: #fff; }
+
+.form__elem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+.form__column {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 20px; }
+  .form__column:last-child {
+    margin-right: 0; }
+
+.form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px; }
+  .form__row:first-child {
+    margin-top: 0; }
+
+.form__block {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 20px;
+  display: block; }
+  .form__block:last-child {
+    margin-right: 0; }
+
+.form__input {
+  background: #fff;
+  border-radius: 3px;
+  border: none;
+  padding: 8px 21px;
+  width: 100%; }
+  .form__input--textarea {
+    resize: none;
+    height: 110px; }
+
+.form__content {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 650px; }
+
+.form__input {
+  background: #fff;
+  border-radius: 3px;
+  border: 2px solid #fff;
+  padding: 8px 21px;
+  width: 100%;
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #2f3234; }
+  .form__input--textarea {
+    resize: none;
+    height: 110px; }
+  .form__input:focus {
+    border-color: #f9b43b;
+    border-radius: 3px;
+    outline: none; }
+
+.form__block-title {
+  color: #fff;
+  font-size: 14px;
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 300;
+  margin-bottom: 7px; }
+
+.form__block--radiocheck {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.form__radio {
+  position: relative;
+  margin-bottom: 0; }
+
+.form__trueradio {
+  visibility: hidden; }
+
+.form__label--radio {
+  margin-left: 10px; }
+
+.form__fakeradio {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  background: #ffffff;
+  display: block; }
+  .form__fakeradio:before {
+    content: "";
+    height: 7px;
+    width: 7px;
+    background-color: #e45028;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto auto;
+    visibility: hidden; }
+
+.form__fakedot {
+  height: 7px;
+  width: 7px;
+  background-color: #e45028;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto auto;
+  visibility: hidden; }
+
+.form__fakeradio--checkbox {
+  border-radius: 0%;
+  height: 16px;
+  width: 16px; }
+  .form__fakeradio--checkbox:before {
+    background: url(../img/check_mark.png) no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: center center; }
+
+.form__trueradio:checked ~ .form__fakeradio:before {
+  visibility: visible; }
