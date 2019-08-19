@@ -543,7 +543,7 @@ button {
 .burger__content {
   min-width: 1100px;
   height: 100vh;
-  min-height: 650px;
+  min-height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -612,7 +612,7 @@ button {
   -ms-flex-pack: center;
   justify-content: center;
   height: 100vh;
-  min-height: 650px; }
+  min-height: 600px; }
 
 .best__сol {
   list-style: none;
@@ -711,7 +711,7 @@ button {
 
 .comments__block {
   position: relative;
-  height: 52vh; }
+  height: 50vh; }
 
 .comments__desc {
   position: absolute;
@@ -840,7 +840,7 @@ button {
   -ms-flex-direction: column;
   flex-direction: column;
   height: 100vh;
-  min-height: 650px; }
+  min-height: 600px; }
 
 .form__input {
   background: #fff;
