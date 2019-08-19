@@ -347,7 +347,7 @@ body {
 
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
