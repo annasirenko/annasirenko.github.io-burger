@@ -2,15 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 11px;
-    max-width: 940px;
+    padding-top: rem(11px);
+    max-width: rem(940px);
     margin: 0 auto;
 }
 
 .menu {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 7px;
+    margin-bottom: rem(7px);
 }
 
 .menu__list {
@@ -27,7 +27,7 @@
 .menu__item {
     display: flex;
     align-items: center;
-    margin-right: 15px;
+    margin-right: rem(15px);
     &:after {
         content: "";
         width: 4px;
@@ -35,7 +35,7 @@
         background: #fff;
         border-radius: 50%;
         display: block;
-        margin-left: 15px;
+        margin-left: rem(15px);
     }
     &:last-child {
         &::after {
