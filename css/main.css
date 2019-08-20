@@ -558,6 +558,14 @@ button {
   background: url("../img/texture.jpg") no-repeat center center;
   background-size: cover; }
 
+.nextscreen-arrow {
+  max-height: 20px;
+  max-width: 30px; }
+
+.logo-pic {
+  max-width: 100px;
+  max-height: 100px; }
+
 .main__section-columns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -660,6 +668,10 @@ button {
 
 .best__item:nth-child(3) {
   margin-top: 0.5rem; }
+
+.meat-icon {
+  height: 89px;
+  width: 97px; }
 
 .best__desc {
   color: #2f3234;
