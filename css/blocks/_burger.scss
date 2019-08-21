@@ -12,6 +12,11 @@
     background: url('../img/texture.jpg') no-repeat center center;
     background-size: cover;
 }
+
+.burger__container{
+    max-width: rem(940px);
+    margin: 0 auto;
+}
 .nextscreen-arrow{
     max-height: 20px;
     max-width: 30px;
@@ -51,6 +56,11 @@
     &--centered {
         margin-bottom: rem(55px);
         text-align: center;
+    }
+    &-menu{
+        color: #fff;
+        position: absolute;
+        margin: 111px 0px 0px 102px;
     }
 }
 

@@ -7,13 +7,13 @@
     margin: 0 auto;
 }
 
-.menu {
+.nav {
     display: flex;
     justify-content: space-between;
     margin-bottom: rem(7px);
 }
 
-.menu__list {
+.nav__list {
     color: #fff;
     font-family: $ubuntu;
     font-size: 0.812rem;
@@ -24,7 +24,7 @@
     text-transform: uppercase;
 }
 
-.menu__item {
+.nav__item {
     display: flex;
     align-items: center;
     margin-right: rem(15px);

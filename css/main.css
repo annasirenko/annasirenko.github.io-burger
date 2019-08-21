@@ -362,7 +362,16 @@ body {
 
 .container {
   max-width: 58.75rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 img {
   display: block;
@@ -441,7 +450,6 @@ button {
 .btn__scroll {
   width: 1.8125rem;
   height: 0.875rem;
-  background: url("../img/arrow-scroll.png") center center/contain no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -484,7 +492,7 @@ button {
   max-width: 58.75rem;
   margin: 0 auto; }
 
-.menu {
+.nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -493,7 +501,7 @@ button {
   justify-content: space-between;
   margin-bottom: 0.4375rem; }
 
-.menu__list {
+.nav__list {
   color: #fff;
   font-family: "Ubuntu", Helvetica, sans-serif;
   font-size: 0.812rem;
@@ -509,7 +517,7 @@ button {
   align-items: center;
   text-transform: uppercase; }
 
-.menu__item {
+.nav__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -517,7 +525,7 @@ button {
   -ms-flex-align: center;
   align-items: center;
   margin-right: 0.9375rem; }
-  .menu__item:after {
+  .nav__item:after {
     content: "";
     width: 4px;
     height: 4px;
@@ -525,7 +533,7 @@ button {
     border-radius: 50%;
     display: block;
     margin-left: 0.9375rem; }
-  .menu__item:last-child::after {
+  .nav__item:last-child::after {
     display: none;
     margin-right: 0; }
 
@@ -557,6 +565,10 @@ button {
   position: relative;
   background: url("../img/texture.jpg") no-repeat center center;
   background-size: cover; }
+
+.burger__container {
+  max-width: 58.75rem;
+  margin: 0 auto; }
 
 .nextscreen-arrow {
   max-height: 20px;
@@ -595,6 +607,10 @@ button {
   .title--centered {
     margin-bottom: 3.4375rem;
     text-align: center; }
+  .title-menu {
+    color: #fff;
+    position: absolute;
+    margin: 111px 0px 0px 102px; }
 
 .title-lowercase {
   font-family: "Lifehack", Helvetica, sans-serif;
@@ -1027,8 +1043,14 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 17px;
-  padding-left: 17px; }
+  padding-top: 1.0625rem;
+  padding-left: 1.0625rem;
+  height: 0;
+  overflow: hidden; }
+
+.accordeon__about--active {
+  height: 100%;
+  overflow: visible; }
 
 .accordeon-pic {
   overflow: hidden;
@@ -1047,20 +1069,136 @@ button {
   object-fit: cover; }
 
 .accordeon__desc {
-  max-width: 208px;
-  margin-left: 17px; }
-
-.accordeon__about {
-  height: 0;
-  overflow: hidden; }
-
-.accordeon__about--active {
-  height: 100%;
-  overflow: visible; }
+  max-width: 13rem;
+  margin-left: 1.0625rem; }
 
 .desc__worker {
   font-weight: bold; }
 
 .desc__help {
-  margin-top: 17px;
+  margin-top: 1.0625rem;
   line-height: 1.6; }
+
+.menu {
+  background: url("../img/burger-background.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative; }
+
+.menu__aside {
+  position: absolute;
+  right: 0;
+  max-width: 100%;
+  height: 100%; }
+
+.menu-accordeon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%; }
+
+.menu-accordeon__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.menu-accordeon__button {
+  background: url("../img/burger-1.png") center center/cover no-repeat;
+  max-width: 5rem;
+  font-family: "Gagalin", Helvetica, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+  .menu-accordeon__button-veg {
+    background: url("../img/burger-2.png") center center/cover no-repeat; }
+  .menu-accordeon__button-diet {
+    background: url("../img/burger-3.png") center center/cover no-repeat; }
+
+.menu-accordeon__name {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  padding: 2.5rem 1.5625rem 0rem 1.5625rem;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr; }
+
+.menu-accordeon__about {
+  width: 0;
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.6;
+  font-size: 0.875rem;
+  overflow: hidden; }
+
+.menu-accordeon__card--active .menu-accordeon__about {
+  min-width: 33.75rem;
+  background-color: rgba(47, 50, 52, 0.9);
+  height: 100%;
+  padding: 3.875rem 2.3125rem 0rem 2.0625rem; }
+
+.map {
+  background: url("../img/map.jpg") center center/cover no-repeat;
+  position: relative; }
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  background: url("../img/footer.jpg");
+  max-height: 63px; }
+
+.contacts {
+  width: 50%;
+  padding: 0.75rem 0; }
+
+.phone-pic {
+  height: 12px;
+  width: 11px; }
+
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  width: 50%; }
+
+.socials__item {
+  margin-right: 0.625rem;
+  display: inline-block; }
+
+.socials__icon {
+  max-height: 20px;
+  max-width: 20px;
+  fill: #585858;
+  -webkit-transition: .3s linear;
+  -o-transition: .3s linear;
+  transition: .3s linear; }
+  .socials__icon:hover {
+    fill: #fff; }
+
+.contacts__address {
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 0.625rem; }
+
+.contacts__number {
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  color: #e45028;
+  font-size: 0.875rem;
+  font-weight: 400; }
