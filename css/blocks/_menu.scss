@@ -22,7 +22,7 @@
 
 .menu-accordeon__button {
   background: url('../img/burger-1.png') center center / cover no-repeat;
-  max-width: rem(80px);
+  max-width: 80px;
   font-family: $gagalin;
   font-size: rem(36px);
   font-weight: 400;
@@ -56,8 +56,22 @@
 }
 
 .menu-accordeon__card--active .menu-accordeon__about {
-  min-width: rem(540px);
+  min-width: 540px;
   background-color: rgba(47, 50, 52, 0.9);
   height: 100%;
   padding: rem(62px) rem(37px) rem(0px) rem(33px);
 }
+
+@media (max-width:768px){
+  .menu-accordeon__card--active .menu-accordeon__about{
+    min-width: 370px;
+  }
+  
+}
+
+// @media (max-width:480px){
+//   .menu-accordeon__card--active .menu-accordeon__about{
+//     min-width: 200px;
+    
+//   }
+// }

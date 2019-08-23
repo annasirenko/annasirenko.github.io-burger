@@ -3,14 +3,19 @@
     justify-content: space-between;
     align-items: center;
     padding-top: rem(11px);
-    max-width: rem(940px);
+    max-width: 940px;
     margin: 0 auto;
 }
 
-.nav {
+.header{
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin-bottom: rem(7px);
+    }
+
+.header__buttons{
+    display: flex;
+    align-items: center;
 }
 
 .nav__list {
@@ -50,3 +55,18 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@media (max-width: 768px) {
+    .nav{
+        display: none;
+    }
+
+}
+
+// @media (max-width: 480px){
+//     .nav{
+//         display: none;
+//     }
+
+// }
+

@@ -5,26 +5,32 @@
 
 .best__content {
     padding-bottom: rem(30px);
-    min-width: rem(1100px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
-    min-height: rem(600px);
+    min-height: 600px;
 }
 
 .best__сol {
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    
 }
 
 .best__item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 33%;
-}
+    flex: 1;
+    margin-right: 35px;
+    text-align: center;
+  
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
 
 .best__main-title {
     color: $grey;
@@ -69,4 +75,17 @@
     opacity: 0.8;
     line-height: rem(25px);
     // width: 95%;
+}
+
+@media (max-width: 480px){
+    .best__сol{
+        flex-direction: column;
+    }
+    .best__item{
+        width: 100%;
+        flex-direction: row;
+        text-align: left;
+        margin-top: 0;
+    }
+    
 }

@@ -9,7 +9,7 @@
   right: 0;
   width: 50%;
   height: 100vh;
-  min-height: rem(600px);
+  min-height: 600px;
   background: rgba(49, 52, 54, 0.9);
   display: flex;
   flex-direction: column;
@@ -50,7 +50,7 @@
       content: "";
       height: 7px;
       width: 9px;
-      margin-right: 9px;
+      margin-right: rem(9px);
       // color: $orange;
       overflow: hidden;
       position: absolute;
@@ -60,13 +60,13 @@
       border-right: 4px solid transparent;
       border-top: 6px solid $orange;
       right: 100%;
-      top: 6px;
+      top: rem(6px);
            
   }
 }
 
 .accordeon__team{
-  margin-top: 35px;
+  margin-top: rem(35px);
   
 }
 
@@ -124,4 +124,19 @@
 .desc__help{
   margin-top: rem(17px);
   line-height: 1.6;
+}
+
+@media (max-width: 768px){
+  .team__aside {
+    width: 100%;
+  }
+  .accordeon__about{
+    flex-direction: column;
+  }
+  .accordeon{
+    text-align: center;
+  }
+  .accordeon-pic{
+    margin-left: rem(70px);
+  }
 }

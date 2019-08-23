@@ -36,3 +36,17 @@
     border: solid 1px $ginger;
     border-radius: 50%;
 }
+
+@media (max-width: 768px){
+    .sidemenu{
+        display: none;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .sidemenu{
+        display: none;
+    }
+
+}

@@ -54,3 +54,19 @@
   
 }
 
+@media (max-width: 480px){
+  .footer{
+    max-height: 120px;
+  }
+  .footer__container{
+    flex-direction: column;
+    text-align: center;
+  }
+  .contacts{
+    width: 100%;
+  }
+  .socials{
+    justify-content: center;
+    margin-left: rem(25px);
+  }
+}
