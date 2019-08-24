@@ -37,6 +37,17 @@ body {
     height: 100%;
 }
 
+html{
+    font-size: 16px;
+
+    @include tablets{
+    font-size: 15px;       
+    }
+    @include phones{
+    font-size: 14px;       
+   }
+}
+
 .wrapper {
     overflow: hidden;
     min-width: 100%;
@@ -54,7 +65,8 @@ body {
 }
 
 .container {
-    max-width: rem(940px);
+    width: 95%;
+    max-width: 940px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -63,11 +75,8 @@ body {
     }
 
 .footer__container{
-    max-width: rem(940px);
-    margin: 0 auto;
-    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
 
 }
 
@@ -79,22 +88,28 @@ img{
 @media (max-width: 768px){
     
     .container{
-        max-width: rem(660px);
+        max-width: 660px;
     }
 
     .footer__container{
-        max-width: rem(660px);
+        max-width: 660px;
     }
 }
 
 @media (max-width: 480px){
     
     .container{
-        max-width: rem(410px);
+        max-width: 410px;
     }
 
     .footer__container{
-        max-width: rem(410px);
+        max-width: 410px;
     }
 }
 
+
+// @media (max-width: 1000px){
+//     .section{
+//         height: 100vh;
+//     }
+// }

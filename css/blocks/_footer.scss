@@ -22,10 +22,16 @@
 }
 
 .socials__item{
-  margin-right: rem(10px);
   // margin-top: 5px;
   display: inline-block;
+  &:last-child{
+    margin-right: 0;
+  }
   
+}
+
+.socials__link{
+  margin-right: rem(20px);
 }
 
 .socials__icon{
@@ -67,6 +73,6 @@
   }
   .socials{
     justify-content: center;
-    margin-left: rem(25px);
+    
   }
 }

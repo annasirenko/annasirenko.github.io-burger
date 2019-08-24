@@ -74,11 +74,23 @@
 @media (max-width: 768px){
     .main__section-columns{
         flex-direction: column;
+        padding: 0 10%;
     }
+    .main__desc{
+        text-align: center;
+        margin-top: rem(10px);
+    }
+    .title{
+        margin-top: 0;
+        
+    }
+
 }
 
 @media (max-width: 480px){
     .main__section-columns{
         flex-direction: column;
     }
+
+
 }

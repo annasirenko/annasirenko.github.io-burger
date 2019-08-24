@@ -3,10 +3,15 @@
     color: #fff;
 }
 
+
+
 .form__elem {
     display: flex;
     align-items: flex-start;
+    
 }
+    
+
 
 .form__column {
     flex: 1;
@@ -33,17 +38,7 @@
     }
 }
 
-.form__input {
-    background: #fff;
-    border-radius: 3px;
-    border: none;
-    padding: rem(8px) rem(21px);
-    width: 100%;
-    &--textarea {
-        resize: none;
-        height: rem(110px);
-    }
-}
+
 
 .form__content {
     justify-content: center;
@@ -152,4 +147,47 @@
 .form__trueradio:checked~.form__fakeradio:before {
     visibility: visible;
     
+}
+
+@include tablets {
+    .order {
+        text-align: center;
+    }
+    .form__elem {
+        flex-direction: column;
+        padding: 0 17%;
+        text-align: left;
+    }
+    
+    .form__column {
+        margin: 0;
+        
+    }
+}
+
+@include phones {
+    .form__elem {
+        padding: 0;
+        text-align: center
+    }
+    .form__block {
+        &:nth-child(4) {
+            display: none
+        }
+        &:nth-child(3) {
+            margin-right: 0
+        }
+    }
+    
+    ;
+    .form__block-title {
+        text-align: left
+    }
+    // .form__input--textarea {
+    //     margin-bottom: 3%;
+    // }
+    .form__block--radiocheck {
+        justify-content: center;
+        
+    }
 }

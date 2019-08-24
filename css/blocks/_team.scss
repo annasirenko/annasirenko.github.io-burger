@@ -7,7 +7,7 @@
 .team__aside{
   position: absolute;
   right: 0;
-  width: 50%;
+  left: 50%;
   height: 100vh;
   min-height: 600px;
   background: rgba(49, 52, 54, 0.9);
@@ -128,15 +128,27 @@
 
 @media (max-width: 768px){
   .team__aside {
-    width: 100%;
+    left: 0;
+    
   }
+  
   .accordeon__about{
     flex-direction: column;
+    margin-right: rem(18px);
   }
   .accordeon{
     text-align: center;
   }
   .accordeon-pic{
-    margin-left: rem(70px);
+    margin-left: rem(54px);
+  }
+  .accordeon__name{
+    font-size: rem(24px);
+  }
+  .accordeon__desc {
+    margin-left: 0;
+  }
+  .desc__worker{
+    margin-top: rem(15px);
   }
 }

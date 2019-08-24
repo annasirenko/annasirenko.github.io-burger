@@ -2,15 +2,15 @@
 //     min-width: rem(1100px);
 // }
 
-// .comments__section {
-//     height: 100%
-// }
+.comments__section {
+    height: 100%
+}
 .comments__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    // height: 100%
+    height: 100%
 }
 
 // @mixin block {
@@ -26,6 +26,13 @@
     width: 25%;
     overflow: hidden;
     filter: grayscale(1);
+    position: relative;
+    height: 50%;
+
+    @include tablets{
+        width: 50%;
+        height: 25%;
+    }
 }
 
 .comments__content {
@@ -37,12 +44,13 @@
     width: 100%;
     height: 100%;
     display: block;
+    object-fit: cover;
 }
 
-.comments__block {
-    position: relative;
-    height: 50vh;
-}
+// .comments__block {
+//     position: relative;
+//     height: 50vh;
+// }
 
 .comments__desc {
     position: absolute;
@@ -79,9 +87,3 @@
     margin-bottom: rem(30px);
 }
 
-// @media (max-width: 768px){
-//     .comments__block{
-//         height: 20%;
-//         width: 50%;
-//     }
-// }
