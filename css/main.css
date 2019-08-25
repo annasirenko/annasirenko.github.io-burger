@@ -495,6 +495,17 @@ button {
   transition: .3s linear; }
   .comments-btn:hover {
     background-color: #1f2122; }
+  .comments-btn:after {
+    content: "читать отзыв";
+    position: absolute;
+    left: 5.5rem;
+    display: none; }
+  @media screen and (max-width: 480px) {
+    .comments-btn {
+      color: transparent; }
+      .comments-btn:after {
+        display: inline-block;
+        color: #fff; } }
 
 .header__container {
   display: -webkit-box;
@@ -772,6 +783,12 @@ button {
 .meat-icon {
   height: 89px;
   width: 97px; }
+  @media screen and (max-width: 480px) {
+    .meat-icon {
+      position: static;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none; } }
 
 .best__desc {
   color: #2f3234;
@@ -795,7 +812,20 @@ button {
     -ms-flex-direction: row;
     flex-direction: row;
     text-align: left;
-    margin-top: 0; } }
+    margin-top: 0; }
+  .best-text {
+    text-align: left;
+    display: block;
+    width: 65%;
+    margin-left: 1.5625rem;
+    margin-top: 1.5625rem; } }
+  @media screen and (max-width: 480px) and (max-width: 480px) {
+    .best-text {
+      margin-bottom: 1.5625rem; } }
+
+@media (max-width: 480px) {
+  .best__desc {
+    text-align: left; } }
 
 .comments__section {
   height: 100%; }
@@ -823,13 +853,30 @@ button {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 100%;
   width: 25%;
   overflow: hidden;
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
   position: relative;
   height: 50%; }
+  .comments__block:nth-of-type(1) {
+    background: url("../img/photo1.jpg") center center/cover no-repeat; }
+  .comments__block:nth-of-type(2) {
+    background: url("../img/photo2.jpg") center center/cover no-repeat; }
+  .comments__block:nth-of-type(3) {
+    background: url("../img/photo3.jpg") center center/cover no-repeat; }
+  .comments__block:nth-of-type(4) {
+    background: url("../img/photo4.jpg") center center/cover no-repeat; }
+  .comments__block:nth-of-type(5) {
+    background: url("../img/photo5.jpg") center center/cover no-repeat; }
+  .comments__block:nth-of-type(6) {
+    background: url("../img/photo6.jpg") center center/cover no-repeat; }
+  .comments__block:nth-of-type(7) {
+    background: url("../img/photo7.jpg") center center/cover no-repeat; }
+  .comments__block:nth-of-type(8) {
+    background: url("../img/photo8.jpg") center center/cover no-repeat; }
+  .comments__block:nth-of-type(9) {
+    background: url("../img/photo9.jpg") center center/cover no-repeat; }
   @media screen and (max-width: 768px) {
     .comments__block {
       width: 50%;
@@ -855,10 +902,29 @@ button {
   width: 100%;
   height: 100%;
   color: #fff;
-  padding: 3.125rem 1.5625rem;
+  padding: 0.625rem 1.5625rem;
   -webkit-transition: .3s linear;
   -o-transition: .3s linear;
   transition: .3s linear; }
+  @media screen and (max-width: 480px) {
+    .comments__desc {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
+  @media screen and (max-width: 768px) {
+    .comments__desc {
+      padding: 3% 2% 1% 2%;
+      text-align: center; } }
   .comments__desc:hover {
     opacity: 1;
     background-color: rgba(20, 20, 20, 0.7); }
@@ -869,6 +935,10 @@ button {
   font-family: "Gagalin", Helvetica, sans-serif;
   text-transform: uppercase;
   margin-bottom: 1.5625rem; }
+  @media screen and (max-width: 480px) {
+    .comments__desc-title {
+      font-size: 1.5rem;
+      text-align: center; } }
 
 .comments__desc-text {
   font-size: 0.875rem;
@@ -877,6 +947,15 @@ button {
   line-height: 1.5rem;
   width: 80%;
   margin-bottom: 1.875rem; }
+  @media screen and (max-width: 768px) {
+    .comments__desc-text {
+      margin-bottom: 0.875rem;
+      line-height: 1.2rem;
+      text-align: center;
+      width: 100%; } }
+  @media screen and (max-width: 480px) {
+    .comments__desc-text {
+      display: none; } }
 
 .sidemenu {
   position: fixed;
@@ -1071,7 +1150,8 @@ button {
     padding: 0 17%;
     text-align: left; }
   .form__column {
-    margin: 0; } }
+    margin: 0;
+    width: 100%; } }
 
 @media screen and (max-width: 480px) {
   .form__elem {
@@ -1081,6 +1161,8 @@ button {
     display: none; }
   .form__block:nth-child(3) {
     margin-right: 0; }
+  .form__column {
+    width: 100%; }
   .form__block-title {
     text-align: left; }
   .form__block--radiocheck {

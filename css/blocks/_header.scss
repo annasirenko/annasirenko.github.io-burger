@@ -68,19 +68,24 @@
 	height: rem(22px);
 	align-items: center;
 	margin-left: rem(30px);
-	display: none;
+    display: none;
+    // position: fixed;
 
 	@include tablets {
-		display: inline-flex;
+        display: inline-flex;
+        
 	}
 }
-
+// .fixed-burger{
+//     position: fixed;
+// }
 .hamburger-menu-link__bars {
 	&, &:before, &:after {
 		background: #fff;
 		width: rem(24px);
 		height: rem(5px);
-		border-radius: rem(3px);
+        border-radius: rem(3px);
+        // position: fixed;
 	}
 
 	&:before, &:after {

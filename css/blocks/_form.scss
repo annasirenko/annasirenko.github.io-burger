@@ -161,6 +161,7 @@
     
     .form__column {
         margin: 0;
+        width: 100%;
         
     }
 }
@@ -171,15 +172,19 @@
         text-align: center
     }
     .form__block {
+        
         &:nth-child(4) {
             display: none
         }
         &:nth-child(3) {
-            margin-right: 0
+            margin-right: 0;
         }
     }
     
-    ;
+    .form__column {
+        width: 100%;
+        
+    }
     .form__block-title {
         text-align: left
     }

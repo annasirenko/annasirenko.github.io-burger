@@ -62,6 +62,10 @@
 .meat-icon{
     height: 89px;
     width: 97px;
+    @include phones {
+        position: static;
+        transform: none;
+      }
 }
 
 
@@ -87,5 +91,18 @@
         text-align: left;
         margin-top: 0;
     }
-    
+
+    .best-text{
+        text-align: left;
+        display: block;
+        width: 65%;
+        margin-left: rem(25px);
+        margin-top: rem(25px);
+        @include phones{
+            margin-bottom: rem(25px);
+        }
+    }
+    .best__desc{
+        text-align: left;
+    }
 }

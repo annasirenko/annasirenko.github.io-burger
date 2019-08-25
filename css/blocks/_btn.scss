@@ -61,4 +61,17 @@ button {
     &:hover {
         background-color: #1f2122;
     }
+    &:after {
+        content: "читать отзыв";
+        position: absolute;
+        left: 5.5rem;
+        display: none
+    }
+    @include phones {
+        color: transparent;
+        &:after {
+            display: inline-block;
+            color: #fff
+        }
+}
 }
