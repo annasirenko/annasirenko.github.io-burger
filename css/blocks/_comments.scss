@@ -30,7 +30,7 @@
     
     @for $i from 1 through 9 {
         &:nth-of-type(#{$i}){
-            background: url('../img/photo#{$i}.jpg') center center / cover no-repeat;
+            background: url('../img/photo-#{$i}.jpg') center center / cover no-repeat;
             
            
         }        
