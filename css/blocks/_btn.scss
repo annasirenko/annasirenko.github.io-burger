@@ -46,7 +46,7 @@ button {
     position: absolute;
     bottom: rem(42px);
     left: 49%;
-    transform: rotateX(-50%);
+    transform: translateX(-50%);
 }
 
 .comments-btn {
@@ -64,7 +64,7 @@ button {
     &:after {
         content: "читать отзыв";
         position: absolute;
-        left: 5.5rem;
+        left: 3.6rem;
         display: none
     }
     @include phones {
@@ -72,6 +72,7 @@ button {
         &:after {
             display: inline-block;
             color: #fff
+            
         }
 }
 }

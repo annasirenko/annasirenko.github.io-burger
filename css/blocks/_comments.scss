@@ -31,8 +31,7 @@
     @for $i from 1 through 9 {
         &:nth-of-type(#{$i}){
             background: url('../img/photo-#{$i}.jpg') center center / cover no-repeat;
-            
-           
+                       
         }        
         
     }
@@ -84,8 +83,9 @@
     
     }
     @include tablets{
-        padding: 3% 2% 1% 2%;
+        padding: 16% 2% 1% 2%;
         text-align: center;
+        
 
     }
     

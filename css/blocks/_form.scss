@@ -162,6 +162,7 @@
     .form__column {
         margin: 0;
         width: 100%;
+        margin-bottom: 1rem;
         
     }
 }
@@ -180,9 +181,13 @@
             margin-right: 0;
         }
     }
+    .form__row{
+        margin-top: .55rem;
+    }
     
     .form__column {
         width: 100%;
+        margin-bottom: .5rem;
         
     }
     .form__block-title {
