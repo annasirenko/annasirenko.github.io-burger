@@ -501,9 +501,16 @@ button {
     background-color: #1f2122; }
   .comments-btn:after {
     content: "читать отзыв";
-    position: absolute;
     left: 3.6rem;
     display: none; }
+  .comments-btn:before {
+    content: "подробнее";
+    display: inline;
+    color: #fff; }
+    @media screen and (max-width: 480px) {
+      .comments-btn:before {
+        color: transparent;
+        display: none; } }
   @media screen and (max-width: 480px) {
     .comments-btn {
       color: transparent; }
@@ -815,7 +822,7 @@ button {
   .title-menu {
     color: #fff;
     position: absolute;
-    margin: 111px 0px 0px 102px; }
+    margin: 6.9375rem 0 0 6.375rem; }
 
 .title-lowercase {
   font-family: "Lifehack", Helvetica, sans-serif;
@@ -1556,18 +1563,21 @@ button {
   background-color: rgba(47, 50, 52, 0.9);
   height: 100%; }
 
+.menu-accordeon__card--active .menu-accordeon__name {
+  color: #f9b43b; }
+
 .menu-accordeon__desc {
   padding: 3.875rem 2.1875rem 0rem 2.0625rem; }
 
 @media (max-width: 768px) {
   .menu-accordeon__card--active .menu-accordeon__about {
-    max-width: 690px; } }
+    max-width: 43.125rem; } }
 
 @media (max-width: 480px) {
   .menu-accordeon__card--active .menu-accordeon__about {
-    max-width: 437px; }
+    max-width: 27.3125rem; }
   .menu-accordeon__button {
-    min-width: 42px; } }
+    min-width: 2.625rem; } }
 
 .map {
   background: url("../img/map.jpg") center center/cover no-repeat;

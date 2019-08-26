@@ -100,6 +100,9 @@
  
   
 }
+.menu-accordeon__card--active .menu-accordeon__name {
+  color: $orange;
+}
 
 .menu-accordeon__desc{
   padding: rem(62px) rem(35px) rem(0px) rem(33px);
@@ -109,7 +112,7 @@
 
 @media (max-width:768px){
   .menu-accordeon__card--active .menu-accordeon__about{
-    max-width: 690px;
+    max-width: rem(690px);
   }
   
   
@@ -117,11 +120,11 @@
 
 @media (max-width:480px){
   .menu-accordeon__card--active .menu-accordeon__about{
-  max-width: 437px;
+  max-width: rem(437px);
         
   }
   .menu-accordeon__button{
-    min-width: 42px;
+    min-width: rem(42px);
   }
 
   // .menu-accordeon__card .menu-accordeon__card--active{
