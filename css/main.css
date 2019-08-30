@@ -1942,7 +1942,10 @@ button {
 
 .fullscreen {
   background: rgba(47, 50, 52, 0.99);
+  position: fixed;
   width: 100%;
+  right: -100%;
+  z-index: 2;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s; }
@@ -1955,9 +1958,6 @@ button {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 100vh; }
 
 .fullscreen__header {
@@ -1969,3 +1969,38 @@ button {
   justify-content: space-between;
   width: 100%;
   margin-top: 0.8125rem; }
+
+.vertical-menu-list {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.vertical-menu-list__link {
+  color: #fff;
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 1.5rem;
+  text-transform: uppercase; }
+
+.vertical-menu-list__element {
+  position: relative;
+  margin-top: 2.5rem; }
+  .vertical-menu-list__element:last-child::after {
+    display: none; }
+  .vertical-menu-list__element::after {
+    position: absolute;
+    content: "•";
+    top: 2.5rem;
+    right: 50%;
+    color: #ffffff; }
+  .vertical-menu-list__element:first-child {
+    margin-top: 0; }
