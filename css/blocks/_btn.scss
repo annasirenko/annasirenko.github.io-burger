@@ -54,7 +54,7 @@ button {
     font-weight: 500;
     font-family: $ubuntu;
     background-color: $grey;
-    padding: 11px 16px;
+    padding: rem(11px) rem(16px);
     border-radius: 4px;
     text-transform: uppercase;
     transition: .3s linear;
@@ -84,4 +84,10 @@ button {
             
         }
 }
+}
+
+.slider-button{
+    height: 100%;
+    display: flex;
+    align-items: center;
 }

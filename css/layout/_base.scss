@@ -35,16 +35,17 @@ body {
     -webkit-font-smoothing: antialiased;
     margin: 0;
     height: 100%;
+    font-size: rem(16px);
 }
 
 html{
-    font-size: 16px;
+    font-size: rem(16px);
 
     @include tablets{
-    font-size: 15px;       
+    font-size: rem(15px);       
     }
     @include phones{
-    font-size: 14px;       
+    font-size: rem(14px);       
    }
 }
 

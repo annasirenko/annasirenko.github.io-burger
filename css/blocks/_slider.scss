@@ -1,0 +1,213 @@
+.slider{
+    background: linear-gradient(to top, #f9b43b, #eb8c38 48%, #f9b43b 74%);
+}
+
+.slider__content{
+    // padding-top: rem(30px);
+    // display: flex;
+    // justify-content: center;
+    height: 100%;
+    justify-content: center;
+    height: 100vh;
+    min-height: 600px;
+}
+.slider-buttons {
+    position: absolute;
+    // top: 50%;
+    
+    display: flex;
+    justify-content: space-between;
+    // width: 100%;
+}
+
+.slider-arrow-left {
+    transform: rotate(90deg);
+    left: 0;
+ }
+  
+  .slider-arrow-right {
+    transform: rotate(270deg); 
+    right: 0;
+    
+}
+
+.slider__card{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.slider__burger{
+    position: relative;
+    display: flex;
+    
+}
+
+.dish-composition__text {
+    position: absolute;
+    font-family: $gagalin;
+    font-size: rem(14px);
+    color: #fff;
+    bottom: rem(13px);
+    left: rem(23px);
+}
+
+.dish-composition {
+    position: absolute;
+    left: 0;
+    top: rem(-60px);
+    width: rem(90px);
+    height: rem(90px);
+    border-radius: rem(5px);
+    background-color: #f08c33;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover{
+      background-color: $ginger;
+      transition: .3s;
+    }
+}
+
+.dish-composition:hover .popup {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.dish-composition__sprite {
+    height: rem(44px);
+    width: rem(46px);
+    position: absolute;
+    left: rem(22px);
+    bottom: rem(32px);
+}
+
+.popup {
+  position: absolute;
+  background: rgba(232, 233, 235, 0.9);
+  border-radius: rem(5px);
+  left: rem(90px);
+  top: 0;
+  opacity: 0;
+  transition: 0.3s;
+  padding: rem(20px);
+  min-width: 300%;
+  display: flex; 
+}
+
+.popup__exit {
+  height: rem(20px);
+  margin-left: rem(30px);
+  display: none; 
+}
+
+.popup__list {
+  width: 100%; 
+}
+
+.popup__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-width: rem(155px); 
+}
+
+.popup__sprite {
+  height: rem(50px);
+  width: rem(50px); 
+}
+
+.popup__name {
+  padding: rem(15px); 
+  font-family: $ubuntu; 
+  font-weight: 500;
+  font-size: rem(14px)
+}
+
+.popup__count {
+  position: absolute;
+  right: 0;
+  font-family: $ubuntu; 
+  font-weight: 300;
+}
+
+.slider__burger-pic-box {
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider__burger-pic {
+    max-width: 100%;
+    
+    
+}
+.dish-calories{
+position: absolute;
+left: 0rem;
+bottom: 0rem;
+opacity: 0.6;
+}
+
+.dish-calories__sprite{
+    height: rem(60px);
+    width: rem(60px);
+    fill: #ffffff; 
+}
+
+.dish-calories__text {
+    position: absolute;
+    font-family: $gagalin;
+    font-size: rem(14px);
+    color: #fff;
+}
+
+.dish-calories__text--numbers{
+    top: 50%;
+    left: rem(18px);
+}
+
+.dish-calories__text--letters{
+    left: rem(13px);
+    top: rem(62px);
+}
+
+.slider__desc{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+    .slider-title{
+        color: #fff;
+    }
+.slider__desc-about{
+    font-family: $ubuntu;
+    font-weight: 300;
+    font-size: rem(14px);
+    margin-top: rem(20px);
+    line-height: 1.8;
+    color: #fff;
+}
+
+.slider-card__price{
+    color: $ginger;
+    font-family: $gagalin;
+}
+
+.slider-card__price--big {
+    font-size: rem(72px);
+}
+
+.slider-card__price--small {
+    font-size: rem(30px);
+    margin-right: rem(29px);
+}
+.order__button-send-slider{
+    font-family: $ubuntu;
+    font-weight: 500;
+    color: #fff;
+}
+
