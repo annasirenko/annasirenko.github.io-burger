@@ -15,8 +15,8 @@
     position: absolute;
     // top: 50%;
     
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     // width: 100%;
 }
 
@@ -130,22 +130,38 @@
   font-weight: 300;
 }
 
+.popup__exit {
+  height: rem(20px);
+  // margin-left: rem(30px);
+  display: block; 
+  
+}
+
+.cross-pic{
+  height: rem(20px);
+  width: rem(20px);
+}
+
+.cros-pic--red{
+  fill:#eb8364;
+}
+
 .slider__burger-pic-box {
     max-height: 100%;
     max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 0 0 auto;
 }
 .slider__burger-pic {
-    max-width: 100%;
-    
+    width: 95%;   
     
 }
 .dish-calories{
 position: absolute;
 left: 0rem;
-bottom: 0rem;
+bottom: -3rem;
 opacity: 0.6;
 }
 
@@ -164,7 +180,8 @@ opacity: 0.6;
 
 .dish-calories__text--numbers{
     top: 50%;
-    left: rem(18px);
+    left: rem(14px);
+    font-size: rem(20px);
 }
 
 .dish-calories__text--letters{
@@ -182,6 +199,10 @@ opacity: 0.6;
 
     .slider-title{
         color: #fff;
+    }
+
+    .title{
+      margin-top: 0;
     }
 .slider__desc-about{
     font-family: $ubuntu;
@@ -211,3 +232,65 @@ opacity: 0.6;
     color: #fff;
 }
 
+@include tablets{
+  .slider__card{
+      flex-direction: column;
+      max-width: 100%;
+      height: 70%;
+      padding: 0rem 0rem; 
+  }
+
+  .slider__burger{
+      width: 100%;
+      justify-content: center; 
+  }
+
+  // .slider__burger-pic-box{
+  //   min-width: 70%;
+  //   margin-bottom: -10%;
+  // }
+  .slider__desc{
+      width: 80%;
+      text-align: center;
+      
+  }
+
+  .dish-calories {
+    right: 0;
+    top: -5.75rem;
+    bottom: auto;
+    left: auto; }
+
+}
+
+.dish-composition{
+  top: -5.75rem;
+
+}
+
+.slider-title {
+  line-height: 0.9; }
+
+
+  @include phones{
+    .slider-card {
+      max-width: 100%;
+     }
+
+    .slider-title{
+      font-size: rem(48px); 
+      }
+    .slider__desc-about {
+      line-height: 1.5;
+       margin-top: rem(12px);
+       font-size: rem(12px); 
+      }
+      .slider-card__price--big {
+        font-size: rem(50px);
+    }
+    .slider-card__price--small {
+      font-size: rem(18px);
+  }
+  }
+
+  

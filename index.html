@@ -12,7 +12,7 @@
 <body>
     <div class="wrapper">
             <!-- Приветственный блок -->
-            <section class="burger section">
+            <section id="burgers"class="burger section">
                 <div class="burger__content container ">
                     <header class="header">
                         
@@ -197,6 +197,7 @@
                                                 <div class="popup__count">80 г</div>
                                         </li>
                                     </ul>
+                                    <button class="popup__exit"><svg class="cross-pic cross-pic--red" viewBox="0 0 20 20"><use xlink:href="./img/sprite.svg#cross"></use></svg></button>
                                 </div>
                                </div>
                                 <div class="slider__burger-pic-box"><img class="slider__burger-pic" src="./img/Бургер.png" alt="black burger"></div>
@@ -637,7 +638,32 @@
         </ul>
     </aside>
 
-    </>
+    <!-- Всплывающая навигация -->
+    <section class="fullscreen section">
+
+        <div class="container fullscreen__content">
+
+            <div class="fullscreen__header">
+                <div class="logo">
+                    <a href="#" class="logo__link"><svg class="logo-pic"><use xlink:href="./img/sprite.svg#logo"></use></svg>
+                    </a>
+                </div>
+
+            </div> 
+
+            <ul class="vertical-menu-list">
+                <li class="vertical-menu-list__element"><a href="#burgers" class="vertical-menu-list__link">о нас </a></li>
+                <li class="vertical-menu-list__element"><a href="#best" class="vertical-menu-list__link">бургеры </a></li>
+                <li class="vertical-menu-list__element"><a href="#team" class="vertical-menu-list__link">команда </a></li>
+                <li class="vertical-menu-list__element"><a href="#menu" class="vertical-menu-list__link">меню </a></li>
+                <li class="vertical-menu-list__element"><a href="#comments" class="vertical-menu-list__link">отзывы </a></li>
+                <li class="vertical-menu-list__element"><a href="#" class="vertical-menu-list__link">как мы работаем </a></li>
+                <li class="vertical-menu-list__element"><a href="#map" class="vertical-menu-list__link">контакты </a></li>
+
+            </ul>
+        </div>
+
+    </section>
 
 </body>
 
