@@ -1773,10 +1773,15 @@ button {
   -o-transition: 0.3s;
   transition: 0.3s;
   padding: 1.25rem;
-  min-width: 300%;
+  width: 300%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  .popup.active {
+    opacity: 1;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
 
 a.popup {
   color: #000; }

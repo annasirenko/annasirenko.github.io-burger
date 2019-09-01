@@ -81,6 +81,7 @@
 .dish-composition:hover .popup {
   opacity: 1;
   transition: 0.3s;
+  
 }
 
 .dish-composition__sprite {
@@ -100,16 +101,13 @@
   opacity: 0;
   transition: 0.3s;
   padding: rem(20px);
-  min-width: 300%;
+  width: 300%;
   display: flex; 
-  // &active{
-  //   .popup__list{
-  //    opacity: 1;
-  //    transition: 0.3s;
-
-  //   }
+  &.active{
+     opacity: 1;
+     transition: 0.3s;
+    }
   
-  // }
 }
 
 a.popup{
