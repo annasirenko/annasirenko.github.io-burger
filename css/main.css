@@ -1777,6 +1777,11 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  .popup.active .popup__list {
+    opacity: 1;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
 
 a.popup {
   color: #000; }
