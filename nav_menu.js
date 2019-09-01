@@ -31,9 +31,8 @@ hamburger.addEventListener('click', function(e) {
 
   fullscreen.addEventListener('click', function(e){
     e.preventDefault();
-    console.log(e.target);
-    
-    if(e.target.classList.contains('.vertical-menu-list__link')){
+        
+    if(e.target.classList.contains('vertical-menu-list__link')){
       closeHamburgerMenu();
     }
 
