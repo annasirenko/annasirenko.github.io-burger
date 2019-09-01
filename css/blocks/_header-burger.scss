@@ -1,4 +1,5 @@
 .hamburger {
+  z-index: 3;
   padding: 15px 15px;
   display: inline-block;
   cursor: pointer;
@@ -24,6 +25,10 @@
   .hamburger.is-active .hamburger-inner::before,
   .hamburger.is-active .hamburger-inner::after {
     background-color: #fff; }
+
+    .hamburger.is-active{
+      position: fixed;
+    }
 
 .hamburger-box {
   width: 40px;

@@ -654,6 +654,7 @@ button {
     display: none; } }
 
 .hamburger {
+  z-index: 3;
   padding: 15px 15px;
   display: inline-block;
   cursor: pointer;
@@ -690,6 +691,9 @@ button {
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
   background-color: #fff; }
+
+.hamburger.is-active {
+  position: fixed; }
 
 .hamburger-box {
   width: 40px;
@@ -1798,8 +1802,10 @@ button {
   font-weight: 300; }
 
 .popup__exit {
-  height: 1.25rem;
-  display: block; }
+  height: 1.25rem; }
+  @media screen and (max-width: 768px) {
+    .popup__exit {
+      display: block; } }
 
 .cross-pic {
   height: 1.25rem;
@@ -1837,6 +1843,10 @@ button {
   height: 3.75rem;
   width: 3.75rem;
   fill: #ffffff; }
+  @media screen and (max-width: 768px) {
+    .dish-calories__sprite {
+      height: 4.75rem;
+      width: 4.75rem; } }
 
 .dish-calories__text {
   position: absolute;
@@ -1845,13 +1855,28 @@ button {
   color: #fff; }
 
 .dish-calories__text--numbers {
-  top: 50%;
+  top: 47%;
   left: 0.875rem;
   font-size: 1.25rem; }
+  @media screen and (max-width: 768px) {
+    .dish-calories__text--numbers {
+      top: 40%;
+      left: 0.9375rem; } }
+  @media screen and (max-width: 480px) {
+    .dish-calories__text--numbers {
+      left: 1.125rem; } }
 
 .dish-calories__text--letters {
-  left: 0.8125rem;
+  left: 0.875rem;
   top: 3.875rem; }
+  @media screen and (max-width: 768px) {
+    .dish-calories__text--letters {
+      top: 4.0625rem;
+      left: 1rem; } }
+  @media screen and (max-width: 480px) {
+    .dish-calories__text--letters {
+      left: 1.125rem;
+      top: 4.25rem; } }
 
 .slider__desc {
   width: 50%;
@@ -1945,6 +1970,7 @@ button {
   position: fixed;
   width: 100%;
   right: -100%;
+  top: 0;
   z-index: 2;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;

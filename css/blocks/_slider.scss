@@ -133,7 +133,10 @@
 .popup__exit {
   height: rem(20px);
   // margin-left: rem(30px);
-  display: block; 
+  @include tablets{
+    display: block; 
+  }
+  
   
 }
 
@@ -169,6 +172,10 @@ opacity: 0.6;
     height: rem(60px);
     width: rem(60px);
     fill: #ffffff; 
+    @include tablets{
+      height: 4.75rem;
+      width: 4.75rem;
+    }
 }
 
 .dish-calories__text {
@@ -179,14 +186,31 @@ opacity: 0.6;
 }
 
 .dish-calories__text--numbers{
-    top: 50%;
+    top: 47%;
     left: rem(14px);
     font-size: rem(20px);
+    @include tablets{
+      top: 40%;
+      left: rem(15px);
+    }
+    @include phones{
+      left: rem(18px);
+
+    }
 }
 
 .dish-calories__text--letters{
-    left: rem(13px);
+    left: rem(14px);
     top: rem(62px);
+    @include tablets{
+      top: rem(65px);
+      left: rem(16px);
+    }
+    @include phones{
+      left: rem(18px);
+      top: rem(68px);
+
+    }
 }
 
 .slider__desc{
