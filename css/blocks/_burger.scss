@@ -23,6 +23,8 @@
 .logo-pic{
     max-width: rem(80px);
     max-height: rem(80px);
+    position: relative;
+    z-index: 3;
     // margin-right: 69px;
 }
 

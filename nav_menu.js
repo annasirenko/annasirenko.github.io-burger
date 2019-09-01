@@ -29,26 +29,26 @@ hamburger.addEventListener('click', function(e) {
    
   });
 
-  // fullscreen.addEventListener('click', function(e){
-  //   e.preventDefault();
-  //   console.log(e.target);
+  fullscreen.addEventListener('click', function(e){
+    e.preventDefault();
+    console.log(e.target);
     
-  //   if(e.target.classList.contains('.vertical-menu-list__link')){
-  //     closeHamburgerMenu();
-  //   }
-
-  // });
-
-
-
-  for (let i=0; i<menuItems.length; i++){
-    const menuItem = menuItems[i];
-    menuItem.addEventListener('click', function(e) {
-      e.preventDefault();
+    if(e.target.classList.contains('.vertical-menu-list__link')){
       closeHamburgerMenu();
+    }
 
-    });
-  }
+  });
+
+
+
+  // for (let i=0; i<menuItems.length; i++){
+  //   const menuItem = menuItems[i];
+  //   menuItem.addEventListener('click', function(e) {
+  //     e.preventDefault();
+  //     closeHamburgerMenu();
+
+  //   });
+  // }
 
 
 // let fullscreenExit = document.querySelector('.hamburger.is-active');
