@@ -14,7 +14,7 @@ button {
     font-family: $ubuntu;
     font-size: 0.812rem;
     font-weight: 500;
-    padding: 13px 13px 13px 13px;
+    padding: rem(13px);
     text-transform: uppercase;
     border-radius: 5px;
     color: #ffffff;
@@ -25,7 +25,7 @@ button {
     font-size: 0.812rem;
     font-weight: 500;
     text-decoration: none;
-    padding: 11px 17px;
+    padding: rem(11px) rem(17px);
     border-radius: 4px;
     background-color: $ginger;
     text-transform: uppercase;
@@ -36,17 +36,17 @@ button {
 }
 
 .btn__scroll {
-    width: 29px;
-    height: 14px;
-    background: url('../img/arrow-scroll.png') center center / contain no-repeat;
+    width: rem(29px);
+    height: rem(14px);
+    // background: url('../img/arrow-scroll.png') center center / contain no-repeat;
     display: flex;
     justify-content: center;
-    margin-top: 82px;
+    margin-top: rem(82px);
     display: block;
     position: absolute;
-    bottom: 42px;
+    bottom: rem(42px);
     left: 49%;
-    transform: rotateX(-50%);
+    transform: translateX(-50%);
 }
 
 .comments-btn {
@@ -54,11 +54,40 @@ button {
     font-weight: 500;
     font-family: $ubuntu;
     background-color: $grey;
-    padding: 11px 16px;
+    padding: rem(11px) rem(16px);
     border-radius: 4px;
     text-transform: uppercase;
     transition: .3s linear;
     &:hover {
         background-color: #1f2122;
     }
+    &:after {
+        content: "читать отзыв";
+        // position: absolute;
+        left: 3.6rem;
+        display: none
+    }
+    &:before{
+        content: "подробнее";
+        display: inline;
+        color: #fff;
+        @include phones{
+            color: transparent;
+            display: none;
+        }
+    }
+    @include phones {
+        color: transparent;
+        &:after {
+            display: inline-block;
+            color: #fff
+            
+        }
+}
+}
+
+.slider-button{
+    height: 100%;
+    display: flex;
+    align-items: center;
 }

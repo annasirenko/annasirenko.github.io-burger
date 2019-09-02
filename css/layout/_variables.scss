@@ -1,0 +1,30 @@
+$orange:#f9b43b;
+$ginger:#e45028;
+$grey: #2f3234;
+
+//  fonts
+$ubuntu: 'Ubuntu',
+Helvetica,
+sans-serif;
+$gagalin: 'Gagalin',
+Helvetica,
+sans-serif;
+$lifehack: 'Lifehack',
+Helvetica,
+sans-serif;
+
+@function rem($px){
+  @return $px / 16px + 0rem;
+}
+
+@mixin tablets(){
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin phones(){
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
