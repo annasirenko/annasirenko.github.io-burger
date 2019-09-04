@@ -1695,7 +1695,7 @@ button {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-  left: 0; }
+  left: -3rem; }
   @media screen and (max-width: 768px) {
     .slider-arrow-left {
       left: 0; } }
@@ -1728,10 +1728,8 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-width: 100%; }
+  min-width: 100%;
+  margin-right: 50%; }
 
 .dish-composition__text {
   position: absolute;
@@ -1953,10 +1951,6 @@ a.popup {
 
 @media screen and (max-width: 768px) {
   .slider__card {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
     max-width: 100%;
     height: 70%;
     padding: 0rem 0rem; }
