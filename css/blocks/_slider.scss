@@ -177,15 +177,17 @@ a.popup{
 }
 
 .slider__burger-pic-box {
-    max-height: 100%;
-    max-width: 100%;
+    // max-height: 100%;
+    // max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 0 0 auto;
+    // flex: 0 0 auto;
+    width: 50%;
 }
 .slider__burger-pic {
     width: 95%;   
+    
     
 }
 .dish-calories{

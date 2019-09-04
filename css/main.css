@@ -1842,8 +1842,6 @@ a.popup {
   fill: #eb8364; }
 
 .slider__burger-pic-box {
-  max-height: 100%;
-  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1853,9 +1851,7 @@ a.popup {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto; }
+  width: 50%; }
 
 .slider__burger-pic {
   width: 95%; }
