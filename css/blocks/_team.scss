@@ -70,17 +70,31 @@
       border-top: 6px solid $orange;
       right: 100%;
       top: rem(6px);
+      @include tablets{
+        top: 1rem;
+      }
            
   }
 }
 
 .accordeon__team{
   margin-top: rem(35px);
+  & .accordeon__about{
+    height: 0;
+    overflow: hidden;
+  }
+
+  &--active .accordeon__about{
+    height: 100%;
+    overflow: visible;
+  }
   
 }
 
 .accordeon__team--active .accordeon__name {
   color: $orange;
+  height: 100%;
+  overflow: visible;
   &:before {
       border-bottom: 6px solid $orange;
       border-top: 0;
@@ -96,14 +110,14 @@
   display: flex;
   padding-top: rem(17px);
   padding-left: rem(17px);
-  height: 0;
-  overflow: hidden;
+  // height: 0;
+  // overflow: hidden;
 }
 
-.accordeon__about--active{
-  height: 100%;
-  overflow: visible;
-}
+// .accordeon__about--active{
+//   height: 100%;
+//   overflow: visible;
+// }
 
 .accordeon-pic {
   overflow: hidden;
