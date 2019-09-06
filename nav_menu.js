@@ -25,6 +25,7 @@ hamburger.addEventListener('click', function(e) {
       
    } else{
       openHamburgerMenu();
+      
    }
    
   });

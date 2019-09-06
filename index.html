@@ -720,11 +720,11 @@
                                     <div class="form__row">
                                         <label class="form__block">
                                     <div class="form__block-title">Имя</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="name" required>
                                         </label>
                                         <label class="form__block">
                                     <div class="form__block-title">Телефон</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="phone" required>
                                 </label>
                                     </div>
                                     
@@ -763,7 +763,7 @@
                                                 <div class="form__block-title">Комментарий</div>
                                     
                                     
-                                    <textarea class="form__input form__input--textarea"></textarea></label>
+                                    <textarea class="form__input form__input--textarea" name="comment" required></textarea></label>
                                     </div>
                                     
                                     <div class="form__row ">
@@ -800,7 +800,7 @@
                   
                                     <div class="form__row ">
                                         <label class="form__block">
-                                            <button class="button order__button-send" type="submit">заказать</button>
+                                            <button class="button form__button-send order__button-send" type="submit">заказать</button>
                                              <button class="button" type="reset">очистить</button>
                                             </label>
                                   </div>
@@ -811,7 +811,7 @@
                         </div>
                     </div>
             </section>
-
+           
             <!-- Карта и футер -->
             <section id="map" class="map section">
                 <footer class="footer">
@@ -907,9 +907,19 @@
         </div>
 
     </section>
+
+    <!-- Модальное окно для формы -->
+    <div class="modal section">
+        <div class="modal-window">
+            <div class="modal-window--text">пример</div>
+            <button class='button modal-window--button order__button-send'>закрыть</button>
+        </div>
+
+        </вш>
 <script src="nav_menu.js"></script>
 <script src="accordion.js"></script>
 <script src="slider.js"></script>
+<!-- <script src="modal-form.js"></script> -->
 
 </body>
 
