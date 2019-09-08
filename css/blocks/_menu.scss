@@ -21,6 +21,7 @@
 
 .menu-accordeon__card{
   display: flex;
+  
   @include tablets {
     &--active{
     position: absolute;
@@ -30,6 +31,7 @@
     height: 100%; 
     z-index: 1;
   }
+  
 }
   
 
@@ -83,19 +85,29 @@
 }
 
 .menu-accordeon__about {
-  max-width: 0;
+  width: 0;
   font-family: $ubuntu;
   font-weight: 300;
   color: #fff;
   line-height: 1.6;
   font-size: rem(14px);
   overflow: hidden;
+  transition: width 0.2s linear; 
+  opacity: 1;
+  &.fade-out{
+    opacity: 0;
+  }
+  
 }
 
 .menu-accordeon__card--active .menu-accordeon__about {
-  max-width: rem(540px);
+  width: rem(540px);
   background-color: rgba(47, 50, 52, 0.9);
   height: 100%;
+  @include tablets{
+    width: rem(740px);
+  }
+  
   // width: 100%;
  
   
@@ -110,17 +122,11 @@
 
 
 
-@media (max-width:768px){
-  .menu-accordeon__card--active .menu-accordeon__about{
-    max-width: rem(740px);
-  }
-  
-  
-}
 
 @media (max-width:480px){
   .menu-accordeon__card--active .menu-accordeon__about{
-  max-width: rem(437px);
+  // width: rem(437px);
+  width: fit-content;
         
   }
   .menu-accordeon__button{
