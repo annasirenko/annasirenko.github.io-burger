@@ -1983,8 +1983,7 @@ a.popup {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin-top: 3.4375rem;
-    margin-right: 43%; }
+    margin-top: 3.4375rem; }
   .slider__desc {
     width: 80%;
     text-align: center; }
@@ -2003,13 +2002,11 @@ a.popup {
 @media screen and (max-width: 480px) {
   .slider-card {
     max-width: 100%; }
-  .slider__burger {
-    margin-right: 41.8rem; }
   .dish-composition {
     left: 0;
-    top: 0; }
+    top: 1.125rem; }
   .dish-calories {
-    top: 0;
+    top: 1.125rem;
     right: 0; }
   .slider-title {
     font-size: 3rem; }

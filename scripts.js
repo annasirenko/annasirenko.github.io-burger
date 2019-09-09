@@ -322,7 +322,7 @@ for (let i = 0; i < commentsButtons.length; i++) {
 
 let popupExit = document.querySelector('.popup__exit');
 let popupDisplay = document.querySelector('.popup');
-let composition = document.querySelector ('.dish-composition');
+let composition = document.querySelector('.dish-composition');
 
 function openPopup(){
   // popupDisplay.style.display = 'flex';
@@ -341,15 +341,24 @@ popupExit.addEventListener('click', function (){
   console.log(1);
 });
 
-composition.addEventListener('mouseenter', function(){
+
+$('.dish-composition').on('mouseenter', function(){
   openPopup();
   console.log(2);
 });
 
-composition.addEventListener('mouseleave', function(){
+$('.dish-composition').on('mouseleave', function(){
   closePopup();
   console.log(3);
 });
+
+
+// composition.addEventListener('mouseenter', function(){
+//   openPopup();
+//   console.log(2);
+// });
+
+
 // composition.addEventListener('click', function(e) {
 //   e.preventDefault();
 //    if(popupDisplay.classList.contains('active')){

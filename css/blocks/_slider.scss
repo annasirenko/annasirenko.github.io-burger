@@ -330,7 +330,7 @@ opacity: 0.6;
       align-items: center;
       flex-direction: column;
       margin-top: rem(55px);
-      margin-right: 43%;
+      // margin-right: 43%;
   }
 
   // .slider__burger-pic-box{
@@ -366,17 +366,17 @@ opacity: 0.6;
       max-width: 100%;
      }
 
-     .slider__burger{
-      margin-right: 41.8rem;
-     }
+    //  .slider__burger{
+    //   margin-right: 41.8rem;
+    //  }
      
      .dish-composition{
       left: 0;
-      top: 0;
+      top: rem(18px);
      }
 
      .dish-calories{
-      top: 0;
+      top:rem(18px);
       right: 0;
      }
     .slider-title{
