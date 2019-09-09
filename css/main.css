@@ -1981,8 +1981,7 @@ a.popup {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column;
-    margin-top: 3.4375rem; }
+    flex-direction: column; }
   .slider__desc {
     width: 80%;
     text-align: center; }
