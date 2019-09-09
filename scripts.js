@@ -320,38 +320,42 @@ for (let i = 0; i < commentsButtons.length; i++) {
 
 // Закрытие состава
 
-let popupExit = document.querySelector('.popup__exit');
-let popupDisplay = document.querySelector('.popup');
-let composition = document.querySelector('.dish-composition');
+// let popupExit = document.querySelector('.popup__exit');
+// let popupDisplay = document.querySelector('.popup');
+// let composition = document.querySelector('.dish-composition');
 
-function openPopup(){
-  // popupDisplay.style.display = 'flex';
-  popupDisplay.classList.add('active');
+// function openPopup(){
+//   // popupDisplay.style.display = 'flex';
+//   popupDisplay.classList.add('active');
 
-}
+// }
 
-function closePopup(){
-  // popupDisplay.style.display = 'none';
-  popupDisplay.classList.remove('active');
+// function closePopup(){
+//   // popupDisplay.style.display = 'none';
+//   popupDisplay.classList.remove('active');
 
-}
+// }
 
-popupExit.addEventListener('click', function (){
-  closePopup();
-  console.log(1);
-});
+// popupExit.addEventListener('click', function (){
+//   closePopup();
+//   console.log(1);
+// });
 
 
-$('.dish-composition').on('mouseenter', function(){
-  openPopup();
+$('.dish-composition').on('mouseenter', function(){ 
+  $(this).find('.popup').addClass('active');		
   console.log(2);
 });
 
-$('.dish-composition').on('mouseleave', function(){
-  closePopup();
+​$('.dish-composition').on('mouseleave', function(){   
+  $(this).find('.popup').removeClass('active');		 
   console.log(3);
-});
+});​
 
+$('.popup__exit').on('click', function(){		
+  $(this).find('.popup').removeClass('active'); 
+  console.log(4);
+})
 
 // composition.addEventListener('mouseenter', function(){
 //   openPopup();
