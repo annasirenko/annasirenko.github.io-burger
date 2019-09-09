@@ -149,13 +149,13 @@ function slider(){
   const slide = document.querySelector('.slider__burger');
 
   let minRight = 0;
-  let step = slide.offsetWidth;
-  let maxRight = (slides.length -1 ) * slide.offsetWidth;
   let currentRight = 0;
 
   slider.style.right = currentRight;
 
   function leftMove(){
+    let step = slide.offsetWidth;
+  let maxRight = (slides.length -1 ) * slide.offsetWidth;
     if(currentRight > minRight){
       currentRight -= step;
       slider.style.right = currentRight + "px";
@@ -166,6 +166,8 @@ function slider(){
   }
 
   function rightMove(){
+    let step = slide.offsetWidth;
+  let maxRight = (slides.length -1 ) * slide.offsetWidth;
     
     if (currentRight < maxRight){
       currentRight += step;
@@ -320,6 +322,19 @@ for (let i = 0; i < commentsButtons.length; i++) {
 
 // Закрытие состава
 
+$('.dish-composition').on('mouseenter', function(){
+  $(this).find('.popup').addClass('active');
+  console.log(2);
+});
+$('.dish-composition').on('mouseleave', function(){
+  $(this).find('.popup').removeClass('active');
+  console.log(3);
+});
+$('.popup__exit').on('click', function(){
+  $(this).find('.popup').removeClass('active');
+  console.log(4);
+});
+
 // let popupExit = document.querySelector('.popup__exit');
 // let popupDisplay = document.querySelector('.popup');
 // let composition = document.querySelector('.dish-composition');
@@ -342,24 +357,14 @@ for (let i = 0; i < commentsButtons.length; i++) {
 // });
 
 
-$('.dish-composition').on('mouseenter', function(){ 
-  $(this).find('.popup').addClass('active');		
-  console.log(2);
-});
-
-​$('.dish-composition').on('mouseleave', function(){   
-  $(this).find('.popup').removeClass('active');		 
-  console.log(3);
-});​
-
-$('.popup__exit').on('click', function(){		
-  $(this).find('.popup').removeClass('active'); 
-  console.log(4);
-})
-
 // composition.addEventListener('mouseenter', function(){
 //   openPopup();
 //   console.log(2);
+// });
+
+// composition.addEventListener('mouseleave', function(){
+//   closePopup();
+//   console.log(3);
 // });
 
 
