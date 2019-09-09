@@ -1870,6 +1870,9 @@ a.popup {
   -ms-flex-align: center;
   align-items: center;
   width: 50%; }
+  @media screen and (max-width: 768px) {
+    .slider__burger-pic-box {
+      width: 90%; } }
 
 .slider__burger-pic {
   width: 95%; }
@@ -1921,7 +1924,6 @@ a.popup {
 
 .slider__desc {
   width: 50%;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1932,9 +1934,6 @@ a.popup {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  @media screen and (max-width: 768px) {
-    .slider__desc {
-      height: 28%; } }
 
 .slider-title {
   color: #fff; }
@@ -1989,10 +1988,10 @@ a.popup {
     text-align: center; }
   .dish-composition {
     left: 3.8125rem;
-    top: 11.625rem; }
+    top: 7.625rem; }
   .dish-calories {
     right: 3.8125rem;
-    top: 11.625rem;
+    top: 7.625rem;
     bottom: auto;
     left: auto; } }
 
@@ -2011,7 +2010,7 @@ a.popup {
   .slider-title {
     font-size: 3rem; }
   .slider__desc {
-    height: 35%; }
+    height: 43%; }
   .slider__desc-about {
     line-height: 1.5;
     margin-top: 0.75rem;

@@ -209,9 +209,9 @@ a.popup{
     align-items: center;
     // flex: 0 0 auto;
     width: 50%;
-    // @include tablets {
-    //   margin-bottom: rem(20px);
-    // }
+    @include tablets {
+      width: 90%;
+    }
 }
 .slider__burger-pic {
     width: 95%;   
@@ -272,13 +272,13 @@ opacity: 0.6;
 
 .slider__desc{
     width: 50%;
-    height: 100%;
+    // height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @include tablets{
-      height: 28%;
-    }
+    // @include tablets{
+    //   height: 28%;
+    // }
     }
 
     .slider-title{
@@ -345,11 +345,11 @@ opacity: 0.6;
 
    .dish-composition{
     left: rem(61px);
-    top: rem(186px);
+    top: 7.625rem;
    }
   .dish-calories {
     right: rem(61px);
-    top: rem(186px);;
+    top: 7.625rem;
     bottom: auto;
     left: auto; }
 
@@ -384,7 +384,7 @@ opacity: 0.6;
       }
 
       .slider__desc{
-        height: 35%;
+        height: 43%;
       }
 
     .slider__desc-about {
