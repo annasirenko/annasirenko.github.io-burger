@@ -6,12 +6,15 @@ let menuItems = document.querySelectorAll('.vertical-menu-list__link');
 function openHamburgerMenu(){
   fullscreen.style.right = '0';
   hamburger.classList.add('is-active');
+  body.style.overflow = 'hidden';
 
 }
 
 function closeHamburgerMenu(){
   fullscreen.style.right = '-100%';
   hamburger.classList.remove('is-active');
+  body.style.overflow = 'auto';
+  
 
 }
 
@@ -296,19 +299,20 @@ let comments = document.querySelectorAll('.comments__desc');
 
 feedbackExit.addEventListener('click', function() {
    popupFeedback.style.display = 'none';
-  //  body.style.overflow = 'auto';
+   document.body.style.overflow = 'auto';
    });
 
 for (let i = 0; i < commentsButtons.length; i++) {
   commentsButtons[i].addEventListener('click', function() {
     popupFeedback.style.display = 'flex';
+    body.style.overflow = 'hidden';
     let feedbackPopupName = document.querySelector('.comments-popup__name');
     let feedbackCardName = document.querySelectorAll('.comments__desc-title');
     let feedbackPopupReview = document.querySelector('.comments-popup__text');
     let cardReview = document.querySelectorAll('.comments__desc-text');
     feedbackPopupName.textContent = feedbackCardName[i].textContent;
     feedbackPopupReview.textContent = cardReview[i].textContent;
-    // body.style.overflow = 'hidden';
+    
 
     });
 }
@@ -321,30 +325,44 @@ let popupDisplay = document.querySelector('.popup');
 let composition = document.querySelector ('.dish-composition');
 
 function openPopup(){
-  popupDisplay.style.display = 'flex';
+  // popupDisplay.style.display = 'flex';
   popupDisplay.classList.add('active');
 
 }
 
 function closePopup(){
-  popupDisplay.style.display = 'none';
+  // popupDisplay.style.display = 'none';
   popupDisplay.classList.remove('active');
 
 }
 
-composition.addEventListener('click', function(e) {
-  e.preventDefault();
-   if(popupDisplay.classList.contains('active')){
-    // popupDisplay.classList.add('fadeOut');
-    //  setTimeout(() => {
-      closePopup();
-    //   popupDisplay.classList.remove('fadeOut');
-    //  }, 400);
+popupExit.addEventListener('click', function (){
+  closePopup();
+  console.log(1);
+});
+
+composition.addEventListener('mouseenter', function(){
+  openPopup();
+  console.log(2);
+});
+
+composition.addEventListener('mouseleave', function(){
+  closePopup();
+  console.log(3);
+});
+// composition.addEventListener('click', function(e) {
+//   e.preventDefault();
+//    if(popupDisplay.classList.contains('active')){
+//     // popupDisplay.classList.add('fadeOut');
+//     //  setTimeout(() => {
+//       closePopup();
+//     //   popupDisplay.classList.remove('fadeOut');
+//     //  }, 400);
       
-   } else{
-      openPopup();
+//    } else{
+//       openPopup();
       
-   }
+//    }
 
       
-  });
+//   });

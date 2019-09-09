@@ -16,6 +16,7 @@
     position: absolute;
     top: 50%;
     
+    
     // display: flex;
     // justify-content: space-between;
     // width: 100%;
@@ -24,8 +25,9 @@
 .slider-arrow-left {
     transform: rotate(90deg);
     left: -3rem;
+    z-index: 2;
     @include tablets{
-      left: 0;
+      left: rem(-12px);
     }
     
  }
@@ -34,7 +36,7 @@
     transform: rotate(270deg); 
     right: -3rem;
     @include tablets{
-      right: 0;
+      right: rem(-12px);
     }
     
 }
@@ -46,6 +48,7 @@
     width: 100%;
     will-change: right;
     transition: right .3s;
+    position: relative;
 }
 
 .slider__burger{
@@ -53,11 +56,18 @@
     display: flex;
     // justify-content: space-between;
     // align-items: center;
-    // height: 100%;
+    height: 100%;
     min-width: 100%;
-    margin-right: 50%;
-
+    // margin-right: 50%;
     
+}
+
+.slider__wrapper{
+  overflow: hidden;
+  min-height: 60%;
+  @include tablets{
+    height: 100%;
+  }
 }
 
 .dish-composition__text {
@@ -72,16 +82,18 @@
 .dish-composition {
     position: absolute;
     left: 0;
-    top: rem(-60px);
+    top: 0;
     width: rem(90px);
     height: rem(90px);
     border-radius: rem(5px);
     background-color: #f08c33;
     transition: 0.3s;
     cursor: pointer;
+    z-index: 10;
     &.active{
       @include tablets{
         background-color: $ginger;
+        
         }
     }
     &:hover{
@@ -110,17 +122,22 @@
 .popup {
   position: absolute;
   background: rgba(232, 233, 235, 0.9);
+  color: black;
   border-radius: rem(5px);
-  left: rem(90px);
+  left: -9999px;
+  // left: rem(90px);
   top: 0;
   opacity: 0;
   transition: 0.3s;
   padding: rem(20px);
   width: 300%;
+  // z-index: 10;
   display: flex; 
   &.active{
      opacity: 1;
      transition: 0.3s;
+     left: rem(90px);
+    //  z-index: 10;
     }
       
 }
@@ -192,6 +209,9 @@ a.popup{
     align-items: center;
     // flex: 0 0 auto;
     width: 50%;
+    // @include tablets {
+    //   margin-bottom: rem(20px);
+    // }
 }
 .slider__burger-pic {
     width: 95%;   
@@ -201,7 +221,7 @@ a.popup{
 .dish-calories{
 position: absolute;
 left: 0rem;
-bottom: -3rem;
+bottom: rem(18px);
 opacity: 0.6;
 }
 
@@ -256,6 +276,9 @@ opacity: 0.6;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include tablets{
+      height: 28%;
+    }
     }
 
     .slider-title{
@@ -297,7 +320,7 @@ opacity: 0.6;
   .slider__card{
       // flex-direction: column;
       max-width: 100%;
-      height: 70%;
+      height: 100%;
       padding: 0rem 0rem; 
   }
 
@@ -306,6 +329,8 @@ opacity: 0.6;
       justify-content: center; 
       align-items: center;
       flex-direction: column;
+      margin-top: rem(55px);
+      margin-right: 43%;
   }
 
   // .slider__burger-pic-box{
@@ -318,18 +343,19 @@ opacity: 0.6;
       
   }
 
+   .dish-composition{
+    left: rem(61px);
+    top: rem(186px);
+   }
   .dish-calories {
-    right: 0;
-    top: -5.75rem;
+    right: rem(61px);
+    top: rem(186px);;
     bottom: auto;
     left: auto; }
 
 }
 
-.dish-composition{
-  top: -5.75rem;
 
-}
 
 .slider-title {
   line-height: 0.9; }
@@ -340,9 +366,27 @@ opacity: 0.6;
       max-width: 100%;
      }
 
+     .slider__burger{
+      margin-right: 41.8rem;
+     }
+     
+     .dish-composition{
+      left: 0;
+      top: 0;
+     }
+
+     .dish-calories{
+      top: 0;
+      right: 0;
+     }
     .slider-title{
       font-size: rem(48px); 
       }
+
+      .slider__desc{
+        height: 35%;
+      }
+
     .slider__desc-about {
       line-height: 1.5;
        margin-top: rem(12px);
