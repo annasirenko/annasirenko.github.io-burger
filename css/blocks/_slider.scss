@@ -16,6 +16,7 @@
     position: absolute;
     top: 50%;
     
+    
     // display: flex;
     // justify-content: space-between;
     // width: 100%;
@@ -24,17 +25,18 @@
 .slider-arrow-left {
     transform: rotate(90deg);
     left: -3rem;
+    z-index: 2;
     @include tablets{
-      left: 0;
+      left: rem(-12px);
     }
     
  }
   
   .slider-arrow-right {
     transform: rotate(270deg); 
-    right: -5rem;
+    right: -3rem;
     @include tablets{
-      right: 0;
+      right: rem(-12px);
     }
     
 }
@@ -43,14 +45,29 @@
     display: flex;
     align-items: center;
     height: 100%;
+    width: 100%;
     will-change: right;
     transition: right .3s;
+    position: relative;
 }
 
 .slider__burger{
     position: relative;
     display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    height: 100%;
+    min-width: 100%;
+    // margin-right: 50%;
     
+}
+
+.slider__wrapper{
+  overflow: hidden;
+  min-height: 60%;
+  @include tablets{
+    height: 100%;
+  }
 }
 
 .dish-composition__text {
@@ -65,24 +82,34 @@
 .dish-composition {
     position: absolute;
     left: 0;
-    top: rem(-60px);
+    top: 0;
     width: rem(90px);
     height: rem(90px);
     border-radius: rem(5px);
     background-color: #f08c33;
     transition: 0.3s;
     cursor: pointer;
+    // z-index: 10;
+    &.active{
+      @include tablets{
+        background-color: $ginger;
+        
+        }
+    }
     &:hover{
       background-color: $ginger;
       transition: .3s;
+      // @include tablets{
+      //   background-color:  #f08c33;
+      // }
     }
 }
 
-.dish-composition:hover .popup {
-  opacity: 1;
-  transition: 0.3s;
+// .dish-composition:hover .popup {
+//   opacity: 1;
+//   transition: 0.3s;
   
-}
+// }
 
 .dish-composition__sprite {
     height: rem(44px);
@@ -95,19 +122,24 @@
 .popup {
   position: absolute;
   background: rgba(232, 233, 235, 0.9);
+  color: black;
   border-radius: rem(5px);
-  left: rem(90px);
+  left: -9999px;
+  // left: rem(90px);
   top: 0;
   opacity: 0;
   transition: 0.3s;
   padding: rem(20px);
   width: 300%;
+  // z-index: 10;
   display: flex; 
   &.active{
      opacity: 1;
      transition: 0.3s;
+     left: rem(90px);
+    //  z-index: 10;
     }
-  
+      
 }
 
 a.popup{
@@ -170,21 +202,26 @@ a.popup{
 }
 
 .slider__burger-pic-box {
-    max-height: 100%;
-    max-width: 100%;
+    // max-height: 100%;
+    // max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 0 0 auto;
+    // flex: 0 0 auto;
+    width: 50%;
+    @include tablets {
+      width: 90%;
+    }
 }
 .slider__burger-pic {
     width: 95%;   
+    
     
 }
 .dish-calories{
 position: absolute;
 left: 0rem;
-bottom: -3rem;
+bottom: rem(18px);
 opacity: 0.6;
 }
 
@@ -235,10 +272,13 @@ opacity: 0.6;
 
 .slider__desc{
     width: 50%;
-    height: 100%;
+    // height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    // @include tablets{
+    //   height: 28%;
+    // }
     }
 
     .slider-title{
@@ -278,9 +318,9 @@ opacity: 0.6;
 
 @include tablets{
   .slider__card{
-      flex-direction: column;
+      // flex-direction: column;
       max-width: 100%;
-      height: 70%;
+      height: 100%;
       padding: 0rem 0rem; 
   }
 
@@ -289,6 +329,8 @@ opacity: 0.6;
       justify-content: center; 
       align-items: center;
       flex-direction: column;
+      // margin-top: rem(55px);
+      // margin-right: 43%;
   }
 
   // .slider__burger-pic-box{
@@ -301,18 +343,19 @@ opacity: 0.6;
       
   }
 
+   .dish-composition{
+    left: rem(61px);
+    top: 7.625rem;
+   }
   .dish-calories {
-    right: 0;
-    top: -5.75rem;
+    right: rem(61px);
+    top: 7.625rem;
     bottom: auto;
     left: auto; }
 
 }
 
-.dish-composition{
-  top: -5.75rem;
 
-}
 
 .slider-title {
   line-height: 0.9; }
@@ -323,9 +366,27 @@ opacity: 0.6;
       max-width: 100%;
      }
 
+    //  .slider__burger{
+    //   margin-right: 41.8rem;
+    //  }
+     
+     .dish-composition{
+      left: 0;
+      top: rem(18px);
+     }
+
+     .dish-calories{
+      top:rem(18px);
+      right: 0;
+     }
     .slider-title{
       font-size: rem(48px); 
       }
+
+      .slider__desc{
+        height: 43%;
+      }
+
     .slider__desc-about {
       line-height: 1.5;
        margin-top: rem(12px);
