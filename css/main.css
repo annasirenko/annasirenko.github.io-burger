@@ -1772,6 +1772,12 @@ button {
     -o-transition: .3s;
     transition: .3s; }
 
+.dish-composition:hover .popup {
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+
 .dish-composition__sprite {
   height: 2.75rem;
   width: 2.875rem;
