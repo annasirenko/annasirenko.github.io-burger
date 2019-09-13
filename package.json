@@ -1,0 +1,28 @@
+{
+  "name": "annasirenko.github.io-burger",
+  "version": "1.0.0",
+  "description": "Сиренко Анна",
+  "main": "jquery-3.4.1.min.js",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annasirenko/burger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annasirenko/burger/issues"
+  },
+  "homepage": "https://github.com/annasirenko/burger#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-rm": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "node-sass": "^4.12.0"
+  }
+}
