@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
 
-  container = $('.maincontent'),
+  const container = $('.maincontent'),
   sections = $('.section'),
   index = 0,
   scroll = false;
@@ -11,7 +11,7 @@ $(document).ready(function(){
 
 $('body').on('mousewheel', function(event){ 
 
-  activeSection = sections.filter('.active');
+  const activeSection = sections.filter('.active');
 
   if (!scroll){
 

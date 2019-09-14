@@ -7,7 +7,7 @@ const slides = $('.slider__burger');
 $(function (){
 
   var moveSlide = function (container, slideNum){
-    activeSlide = slides.filter('.active'),
+    const activeSlide = slides.filter('.active'),
     reqItem = slides.eq(slideNum),
     reqIndex = reqItem.index(),
     duration = 500;
