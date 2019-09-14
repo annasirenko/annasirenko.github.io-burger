@@ -22,7 +22,7 @@ const {SRC_PATH, DIST_PATH, STYLE_LIBS, JS_LIBS} = require('./gulp.config');
 sass.compiler = require('node-sass');
 
 task( 'clean', () => {
-  return src( '${DIST_PATH}/**/*', { read: false }).pipe( rm() );
+  return src( `${DIST_PATH}/**/*`, { read: false }).pipe( rm() );
 });
 
 task( 'copy:html', () => {
@@ -33,12 +33,12 @@ task( 'copy:html', () => {
 });
 
 task( 'copy:img', () => {
-  return src('${SRC_PATH}/img/**/*').pipe(dest('${DIST_PATH}/img'))
+  return src(`${SRC_PATH}/img/**/*`).pipe(dest(`${DIST_PATH}/img`))
   
 });
 
 task( 'copy:fonts', () => {
-  return src('${SRC_PATH}/fonts/**/*').pipe(dest('${DIST_PATH}/fonts'))
+  return src(`${SRC_PATH}/fonts/**/*`).pipe(dest(`${DIST_PATH}/fonts`))
   
 });
 
