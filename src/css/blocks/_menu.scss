@@ -1,5 +1,5 @@
 .menu{
-  background: url('../img/burger-background.jpg') center center no-repeat;
+  background: url('./img/burger-background.jpg') center center no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -51,7 +51,7 @@
 
 
 .menu-accordeon__button {
-  background: url('../img/burger-1.png') center center / cover no-repeat;
+  background: url('./img/burger-1.png') center center / cover no-repeat;
   min-width: 80px;
     font-family: $gagalin;
   font-size: rem(36px);
@@ -70,10 +70,10 @@
   align-items: center;
   padding-bottom: 3rem;
   &-veg{
-    background: url('../img/burger-2.png') center center / cover no-repeat;
+    background: url('./img/burger-2.png') center center / cover no-repeat;
   }
   &-diet{
-    background: url('../img/burger-3.png') center center / cover no-repeat;
+    background: url('./img/burger-3.png') center center / cover no-repeat;
   }
 }
 
