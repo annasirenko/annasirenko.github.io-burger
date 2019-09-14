@@ -22,7 +22,7 @@ const {SRC_PATH, DIST_PATH, STYLE_LIBS, JS_LIBS} = require('./gulp.config');
 sass.compiler = require('node-sass');
 
 task( 'clean', () => {
-  return src( `${DIST_PATH}/**/*`, { read: false }).pipe( rm() );
+  return src( `${DIST_PATH}/**/*`, { read: false }).pipe( rm() )
 });
 
 task( 'copy:html', () => {
@@ -48,7 +48,6 @@ task( 'styles', () => {
   return src([...STYLE_LIBS, 'src/css/main.scss'])
   .pipe(gulpif(env === 'dev', sourcemaps.init()))
   .pipe(concat('main.min.scss'))
-  .pipe(sourcemaps.init())
   .pipe(sassGlob())
   .pipe(sass().on('error', sass.logError))
   // .pipe(px2rem())
@@ -57,28 +56,28 @@ task( 'styles', () => {
    env === 'dev',
    autoprefixer({
     cascade: false
-})
-)
+})))
+
 .pipe(gulpif(env === 'prod', gcmq()))
 .pipe(gulpif(env === 'prod', cleanCSS()))
 .pipe(gulpif(env === 'dev', sourcemaps.write()))
 .pipe(dest(DIST_PATH))
-.pipe(reload({ stream: true })));
+.pipe(reload({ stream: true }));
 });
 
 
 task('scripts', () =>{
   return src([...JS_LIBS, 'src/scripts/*.js'])
-  .pipe(sourcemaps.init())
-  .pipe(concat('main.min.js'))
-  .pipe(babel({
-    presets: ['@babel/env']
-}))
-  .pipe(uglify())
-  .pipe(sourcemaps.write())
-  .pipe(dest(DIST_PATH))
-  .pipe(reload({stream: true}));
-})
+  .pipe(gulpif(env === 'dev', sourcemaps.init()))
+   .pipe(concat('main.min.js'))
+   .pipe(gulpif(env === 'prod', babel({
+       presets: ['@babel/env']
+     })))
+   .pipe(gulpif(env === 'prod', uglify()))
+   .pipe(gulpif(env === 'dev', sourcemaps.write()))
+   .pipe(dest(DIST_PATH))
+   .pipe(reload({ stream: true }));
+});
 
 
 task('server', () => {
@@ -90,7 +89,22 @@ task('server', () => {
  });
 });
 
+task("watch", ()=> {
 watch ('./src/css/**/*.scss', series('styles'));
 watch ('./src/*.html', series('copy:html'));
 watch ('./src/scripts/*.js', series('scripts'));
-task('default', series ('clean', parallel("copy:html", "copy:img", "copy:fonts", "styles"), "scripts", "server"));
+});
+
+
+task('default',
+ series ('clean', 
+ parallel("copy:html", "copy:img", "copy:fonts", "styles", "scripts"),
+ parallel('watch', 'server')
+ )
+);
+
+task('build',
+ series(
+   'clean',
+   parallel("copy:html", "copy:img", "copy:fonts", "styles", "scripts"))
+);
