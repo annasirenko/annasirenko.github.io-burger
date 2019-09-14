@@ -1,50 +1,50 @@
 // Onepagescroll
 
-$(document).ready(function(){
+// $(document).ready(function(){
 
-  const container = $('.maincontent'),
-  sections = $('.section'),
-  index = 0,
-  scroll = false;
+//   const container = $('.maincontent'),
+//   sections = $('.section'),
+//   index = 0,
+//   scroll = false;
 
-  $('.section:first-child').addClass('active');
+//   $('.section:first-child').addClass('active');
 
-$('body').on('mousewheel', function(event){ 
+// $('body').on('mousewheel', function(event){ 
 
-  const activeSection = sections.filter('.active');
+//   const activeSection = sections.filter('.active');
 
-  if (!scroll){
+//   if (!scroll){
 
-    scroll = true;
+//     let scroll = true;
 
-    if (event.deltaY > 0){
+//     if (event.deltaY > 0){
       
-      if(activeSection.prev().length){
-        index--;
-      }
+//       if(activeSection.prev().length){
+//         index--;
+//       }
   
-    }else{
+//     }else{
       
-      if(activeSection.next().length){
-        index++;
-      }
+//       if(activeSection.next().length){
+//         index++;
+//       }
   
-    }
+//     }
 
-  }
+//   }
 
-  position = (-index * 100) + 'vh';
-  sections.eq(index).addClass('active').siblings().removeClass('active');
+//   position = (-index * 100) + 'vh';
+//   sections.eq(index).addClass('active').siblings().removeClass('active');
 
-  container.css('top', position);
+//   container.css('top', position);
 
-  setTimeout(function(){
-    scroll = false;
+//   setTimeout(function(){
+//     let scroll = false;
 
-  }, 1300);
+//   }, 1300);
   
-});
+// });
 
-});
+// });
 
 

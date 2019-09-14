@@ -2,9 +2,10 @@
   "name": "annasirenko.github.io-burger",
   "version": "1.0.0",
   "description": "Сиренко Анна",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
-    "gulp": "gulp"
+    "gulp": "cross-env NODE_ENV=dev gulp",
+    "build": "cross-env NODE_ENV=prod gulp"
   },
   "repository": {
     "type": "git",
@@ -21,23 +22,27 @@
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
     "browser-sync": "^2.26.7",
+    "cross-env": "^5.2.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^3.0.0",
     "gulp-rm": "^2.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sass-glob": "^1.1.0",
     "gulp-smile-px2rem": "^0.1.0",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
     "node-sass": "^4.12.0"
   },
   "browserslist": [
     "last 2 versions"
   ],
   "dependencies": {
+    "jquery": "^3.4.1",
     "normalize.css": "^8.0.1"
   }
 }

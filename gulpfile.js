@@ -1,4 +1,4 @@
-const { src, dest, task, series, watch } = require('gulp');
+const { src, dest, task, series, watch, parallel } = require('gulp');
 const rm = require( 'gulp-rm' );
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
@@ -11,63 +11,75 @@ const gcmq = require('gulp-group-css-media-queries');
 const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+const gulpif = require('gulp-if');
+
+
+const env = process.env.NODE_ENV;
+
+const {SRC_PATH, DIST_PATH, STYLE_LIBS, JS_LIBS} = require('./gulp.config');
 
 sass.compiler = require('node-sass');
 
 task( 'clean', () => {
-  return src( 'dist/**/*', { read: false }).pipe( rm() );
+  return src( '${DIST_PATH}/**/*', { read: false }).pipe( rm() );
 });
 
 task( 'copy:html', () => {
-  return src('src/*.html')
-  .pipe(dest('dist'))
+  return src(`${SRC_PATH}/*.html`)
+  .pipe(dest(DIST_PATH))
   .pipe(reload({ stream: true }));
   
 });
 
 task( 'copy:img', () => {
-  return src('src/img/**/*').pipe(dest('dist/img'))
+  return src('${SRC_PATH}/img/**/*').pipe(dest('${DIST_PATH}/img'))
   
 });
 
 task( 'copy:fonts', () => {
-  return src('src/fonts/**/*').pipe(dest('dist/fonts'))
+  return src('${SRC_PATH}/fonts/**/*').pipe(dest('${DIST_PATH}/fonts'))
   
 });
 
-const styles = [
-  'node_modules/normalize.css/normalize.css',
-  'src/css/main.scss'
-]
+
 
 task( 'styles', () => {
-  return src (styles)
-  .pipe(concat('main.scss'))
+  return src([...STYLE_LIBS, 'src/css/main.scss'])
+  .pipe(gulpif(env === 'dev', sourcemaps.init()))
+  .pipe(concat('main.min.scss'))
   .pipe(sourcemaps.init())
   .pipe(sassGlob())
   .pipe(sass().on('error', sass.logError))
   // .pipe(px2rem())
-  .pipe(autoprefixer({
+  .pipe(
+    gulpif(
+   env === 'dev',
+   autoprefixer({
     cascade: false
 })
 )
-  .pipe(gcmq())
-  .pipe(cleanCSS())
-  .pipe(sourcemaps.write())
-  .pipe(dest('dist'));
-  
+.pipe(gulpif(env === 'prod', gcmq()))
+.pipe(gulpif(env === 'prod', cleanCSS()))
+.pipe(gulpif(env === 'dev', sourcemaps.write()))
+.pipe(dest(DIST_PATH))
+.pipe(reload({ stream: true })));
 });
 
+
 task('scripts', () =>{
-  return src('src/scripts/*.js')
+  return src([...JS_LIBS, 'src/scripts/*.js'])
   .pipe(sourcemaps.init())
-  .pipe(concat('main.js'))
+  .pipe(concat('main.min.js'))
   .pipe(babel({
     presets: ['@babel/env']
 }))
+  .pipe(uglify())
   .pipe(sourcemaps.write())
-  .pipe(dest('dist'));
+  .pipe(dest(DIST_PATH))
+  .pipe(reload({stream: true}));
 })
+
 
 task('server', () => {
   browserSync.init({
@@ -80,5 +92,5 @@ task('server', () => {
 
 watch ('./src/css/**/*.scss', series('styles'));
 watch ('./src/*.html', series('copy:html'));
-
-task('default', series ('clean', "copy:html", "copy:img", "copy:fonts", "styles", "scripts", "server"));
+watch ('./src/scripts/*.js', series('scripts'));
+task('default', series ('clean', parallel("copy:html", "copy:img", "copy:fonts", "styles"), "scripts", "server"));
