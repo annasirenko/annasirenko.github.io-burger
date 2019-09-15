@@ -1,12 +1,15 @@
 .map{
   height: 100vh;
   width: 100%;
+  position: relative;
 }
 
 .map__hint {
   padding: rem(20px);
   min-height: rem(55px);
   min-width: rem(195px);
+  font-family: $ubuntu;
+  font-weight: 300;
   font-size: rem(20px);
 line-height: 1;
 color: #ffffff;
@@ -18,6 +21,11 @@ border-radius: 20px;
 .map__balloon {
 padding: rem(20px);
 font-size: rem(30px);
+font-family: $ubuntu;
+  font-weight: 300;
+@include phones{
+  font-size: rem(16px);
+}
 line-height: 1;
 color: #ffffff;
 background-color: #f9b43b;
@@ -28,7 +36,7 @@ border-radius: 20px;
 .map__burger-img {
 display: flex;
 justify-content: flex-end;
-height: rem(100px);
-width: rem(100px);
+height:100px;
+width: 100px;
 }
 

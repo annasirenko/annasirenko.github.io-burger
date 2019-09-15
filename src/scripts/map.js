@@ -9,7 +9,7 @@ var placemarks = [
       hintContent: '<div class="map__hint">ул. Литераторов, д. 19</div>',
       balloonContent: [
           '<div class="map__balloon">',
-          '<img class="map__burger-img" src="./img/drops.png" alt="Бургер"/>',
+          // '<img class="map__burger-img" src="./img/drops.png" alt="Бургер"/>',
           'Самые вкусные бургеры у нас! Заходите по адресу: ул. Литераторов, д. 19',
           '</div>'
       ]
@@ -20,7 +20,7 @@ var placemarks = [
       hintContent: '<div class="map__hint">Малый проспект В О, д 64</div>',
       balloonContent: [
           '<div class="map__balloon">',
-          '<img class="map__burger-img" src="./img/drops.png" alt="Бургер/>',
+          // '<img class="map__burger-img" src="./img/drops.png" alt="Бургер/>',
           'Самые вкусные бургеры у нас! Заходите по адресу: Малый проспект В О, д 64',
           '</div>'
       ]
@@ -31,7 +31,7 @@ var placemarks = [
       hintContent: '<div class="map__hint">наб. реки Фонтанки, д. 56</div>',
       balloonContent: [
           '<div class="map__balloon">',
-          '<img class="map__burger-img" src="./img/drops.png" alt="Бургер"/>',
+          // '<img class="map__burger-img" src="./img/drops.png" alt="Бургер"/>',
           'Самые вкусные бургеры у нас! Заходите по адресу: наб. реки Фонтанки, д. 56',
           '</div>'
       ]
