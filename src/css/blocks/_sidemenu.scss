@@ -8,6 +8,11 @@
 .sidemenu__button {
     margin-bottom: rem(12px);
     list-style: none;
+    &.active{
+    border: solid 1px $ginger;
+    border-radius: 50%;
+    
+    }
 }
 
 .sidemenu__button:last-child {
@@ -25,6 +30,7 @@
     border-radius: 50%;
     transition: .3s linear;
     position: relative;
+    
 }
 
 .sidemenu__link:hover {
@@ -32,10 +38,10 @@
     border-radius: 50%;
 }
 
-.sidemenu__link--active {
-    border: solid 1px $ginger;
-    border-radius: 50%;
-}
+// .sidemenu__link--active {
+//     border: solid 1px $ginger;
+//     border-radius: 50%;
+// }
 
 @media (max-width: 768px){
     .sidemenu{

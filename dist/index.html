@@ -13,7 +13,7 @@
     <div class="wrapper">
         <div class="maincontent">
             <!-- Приветственный блок -->
-            <section id="burgers"class="burger section section--active">
+            <section id="burgers"class="burger section active">
                 <div class="burger__content container ">
                     <header class="header">
                         
@@ -23,31 +23,31 @@
                             <nav class="nav">
                                 <ul class="nav__list">
                                     <li class="nav__item">
-                                        <a href="#">О нас</a>
+                                        <a href data-scroll-to="0">О нас</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#">Бургеры</a>
+                                        <a href data-scroll-to="2">Бургеры</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#">Команда</a>
+                                        <a href data-scroll-to="3">Команда</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#">Меню</a>
+                                        <a href data-scroll-to="4">Меню</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#">Отзывы</a>
+                                        <a href data-scroll-to="5">Отзывы</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#">Как мы работаем</a>
+                                        <a href data-scroll-to="7">Как мы работаем</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#">Контакты</a>
+                                        <a href data-scroll-to="7">Контакты</a>
                                     </li>
 
                                 </ul>
                             </nav>    
                             <div class="nav-buttons">                            
-                                <a href="#form" class="order__button-send">Заказать</a>
+                                <a href data-scroll-to="6" class="order__button-send">Заказать</a>
                                 <button class="hamburger hamburger--squeeze">
                                         <div class="hamburger-box">
                                           <div class="hamburger-inner"></div>
@@ -82,7 +82,7 @@
                     </div>
 
                     <div class="btn__scroll">
-                            <a href="#best"><svg class="nextscreen-arrow"><use xlink:href="./img/sprite.svg#arrow"></use></svg></a>
+                            <a href data-scroll-to="1"><svg class="nextscreen-arrow"><use xlink:href="./img/sprite.svg#arrow"></use></svg></a>
 
                     </div>
 
@@ -158,7 +158,7 @@
     
                 </section>
             <!-- Слайдер -->
-            <section class="slider section ">
+            <section id="slider" class="slider section ">
                 <div class="container slider__content">
                     
                     <div class="slider__wrapper">
@@ -216,7 +216,7 @@
                                     <div class="slider-card__price">
                                         <span class="slider-card__price--big">500</span>
                                          <span class="slider-card__price--small">рублей</span>
-                                         <button class="order__button-send order__button-send-slider">заказать</button>
+                                         <a href data-scroll-to="6" class="order__button-send order__button-send-slider">заказать</a>
                                     </div>
                                 </div>
                             </li>
@@ -273,7 +273,7 @@
                                         <div class="slider-card__price">
                                             <span class="slider-card__price--big">500</span>
                                              <span class="slider-card__price--small">рублей</span>
-                                             <button class="order__button-send order__button-send-slider">заказать</button>
+                                             <a href data-scroll-to="6" class="order__button-send order__button-send-slider">заказать</a>
                                         </div>
                                     </div>
                                 </li>
@@ -330,7 +330,7 @@
                                             <div class="slider-card__price">
                                                 <span class="slider-card__price--big">500</span>
                                                  <span class="slider-card__price--small">рублей</span>
-                                                 <button class="order__button-send order__button-send-slider">заказать</button>
+                                                 <a href data-scroll-to="6" class="order__button-send order__button-send-slider">заказать</a>
                                             </div>
                                         </div>
                                     </li>
@@ -387,7 +387,7 @@
                                                 <div class="slider-card__price">
                                                     <span class="slider-card__price--big">500</span>
                                                      <span class="slider-card__price--small">рублей</span>
-                                                     <button class="order__button-send order__button-send-slider">заказать</button>
+                                                     <a href data-scroll-to="6" class="order__button-send order__button-send-slider">заказать</a>
                                                 </div>
                                             </div>
                                         </li>
@@ -444,7 +444,7 @@
                                                     <div class="slider-card__price">
                                                         <span class="slider-card__price--big">500</span>
                                                          <span class="slider-card__price--small">рублей</span>
-                                                         <button class="order__button-send order__button-send-slider">заказать</button>
+                                                         <a href data-scroll-to="6" class="order__button-send order__button-send-slider">заказать</a>
                                                     </div>
                                                 </div>
                                             </li>
@@ -854,22 +854,21 @@
     <aside class="sidemenu">
         <ul class="sidemenu__list">
             <li class="sidemenu__button">
-                <a href="#" class="sidemenu__link
-                            sidemenu__link--active"></a>
+                <a href data-scroll-to="0" class="sidemenu__link"></a>
                 <li class="sidemenu__button">
-                    <a href="#best" class="sidemenu__link"></a>
+                    <a href data-scroll-to="1" class="sidemenu__link"></a>
                     <li class="sidemenu__button">
-                        <a href="#" class="sidemenu__link"></a>
+                        <a href data-scroll-to="2" class="sidemenu__link"></a>
                         <li class="sidemenu__button">
-                            <a href="#" class="sidemenu__link"></a>
+                            <a href data-scroll-to="3" class="sidemenu__link"></a>
                             <li class="sidemenu__button">
-                                <a href="#" class="sidemenu__link"></a>
+                                <a href data-scroll-to="4" class="sidemenu__link"></a>
                                 <li class="sidemenu__button">
-                                    <a href="#" class="sidemenu__link"></a>
+                                    <a href data-scroll-to="5" class="sidemenu__link"></a>
                                     <li class="sidemenu__button">
-                                        <a href="#" class="sidemenu__link"></a>
+                                        <a href data-scroll-to="6" class="sidemenu__link"></a>
                                         <li class="sidemenu__button">
-                                            <a href="#" class="sidemenu__link"></a>
+                                            <a href data-scroll-to="7" class="sidemenu__link"></a>
                                         </li>
         </ul>
     </aside>
@@ -889,25 +888,25 @@
 
             <ul class="vertical-menu-list">
                 <li class="vertical-menu-list__element">
-                    <a href="#burgers" class="vertical-menu-list__link">о нас </a>
+                    <a href data-scroll-to="0" class="vertical-menu-list__link">о нас </a>
                 </li>
                 <li class="vertical-menu-list__element">
-                    <a href="#best" class="vertical-menu-list__link">бургеры </a>
+                    <a href data-scroll-to="2" class="vertical-menu-list__link">бургеры </a>
                 </li>
                 <li class="vertical-menu-list__element">
-                    <a href="#team" class="vertical-menu-list__link">команда </a>
+                    <a href data-scroll-to="3" class="vertical-menu-list__link">команда </a>
                 </li>
                 <li class="vertical-menu-list__element">
-                    <a href="#menu" class="vertical-menu-list__link">меню </a>
+                    <a href data-scroll-to="4" class="vertical-menu-list__link">меню </a>
                 </li>
                 <li class="vertical-menu-list__element">
-                    <a href="#comments" class="vertical-menu-list__link">отзывы </a>
+                    <a href data-scroll-to="5" class="vertical-menu-list__link">отзывы </a>
                 </li>
                 <li class="vertical-menu-list__element">
-                    <a href="#" class="vertical-menu-list__link">как мы работаем </a>
+                    <a href data-scroll-to="7" class="vertical-menu-list__link">как мы работаем </a>
                 </li>
                 <li class="vertical-menu-list__element">
-                    <a href="#map" class="vertical-menu-list__link">контакты </a>
+                    <a href data-scroll-to="7" class="vertical-menu-list__link">контакты </a>
                 </li>
 
             </ul>
@@ -937,6 +936,11 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByg6wr124aJEJMOngRLDLzalyT5vc-upA&callback=initMap">
+    </script>
 <script src="./main.min.js"></script>
 </body>
 
