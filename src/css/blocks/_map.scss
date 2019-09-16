@@ -20,7 +20,7 @@ border-radius: 20px;
 
 .map__balloon {
 padding: rem(20px);
-font-size: rem(30px);
+font-size: rem(20px);
 font-family: $ubuntu;
   font-weight: 300;
 @include phones{
@@ -33,10 +33,10 @@ background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, 
 border-radius: 20px;
 }
 
-.map__burger-img {
-display: flex;
-justify-content: flex-end;
-height:100px;
-width: 100px;
-}
+// .map__burger-img {
+// display: flex;
+// justify-content: flex-end;
+// height:100px;
+// width: 100px;
+// }
 
