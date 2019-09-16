@@ -91,7 +91,7 @@ $(document).ready(function () {
   });
   
   // разрешаем свайп на смартфонах
-  if (isMobile & !$("body").hasClass('locked')) {
+  if (isMobile) {
     window.addEventListener(
       "touchmove",
       e => {
