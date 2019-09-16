@@ -106,6 +106,8 @@ $(document).ready(function () {
           if (direction === "up") scrollDirection = "next";
           if (direction === "down") scrollDirection = "prev";
           scrollViewport(scrollDirection);
+          
+          
         }
       });
     }
