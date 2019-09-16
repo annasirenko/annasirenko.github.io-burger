@@ -116,9 +116,3 @@ function soundOf() {
     }
 }
 
-function changeSoundVolume(){
-  video.volume = soundControl.value/10;
-  console.log((video.volume));
-  
-
-}
