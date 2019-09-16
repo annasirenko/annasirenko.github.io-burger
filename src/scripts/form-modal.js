@@ -11,7 +11,7 @@ let body = document.querySelector('body');
 modalButton.addEventListener('click', function() {
   modal.style.display = 'none';
   body.style.overflow = 'auto';
-  body.classList.remove('.locked');
+  body.classList.remove('locked');
 });
 
 formButton.addEventListener('click', function(e) {
@@ -50,7 +50,7 @@ formButton.addEventListener('click', function(e) {
   modal.style.display = 'flex';
   modalText.textContent = 'Сообщение отправлено';
   body.style.overflow = 'hidden';
-  body.classList.add('.locked');
+  body.classList.add('locked');
   form.reset();
   } 
   // else {
@@ -63,6 +63,6 @@ formButton.addEventListener('click', function(e) {
   modal.style.display = 'flex';
   modalText.textContent = 'Поля "Имя","Телефон" и "Комментарий" должны быть заполнены';
   body.style.overflow = 'hidden';
-  body.classList.add('.locked');
+  body.classList.add('locked');
   }
 });

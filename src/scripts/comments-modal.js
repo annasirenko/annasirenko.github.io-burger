@@ -8,12 +8,14 @@ let comments = document.querySelectorAll('.comments__desc');
 feedbackExit.addEventListener('click', function() {
    popupFeedback.style.display = 'none';
    document.body.style.overflow = 'auto';
+   body.classList.remove('locked');
    });
 
 for (let i = 0; i < commentsButtons.length; i++) {
   commentsButtons[i].addEventListener('click', function() {
     popupFeedback.style.display = 'flex';
     body.style.overflow = 'hidden';
+    body.classList.add('locked');
     let feedbackPopupName = document.querySelector('.comments-popup__name');
     let feedbackCardName = document.querySelectorAll('.comments__desc-title');
     let feedbackPopupReview = document.querySelector('.comments-popup__text');

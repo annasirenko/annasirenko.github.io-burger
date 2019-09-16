@@ -59,14 +59,17 @@ $(document).ready(function () {
     }
   };
   
-  if (!$("body").hasClass('locked')) {
+  
     $(document).on({
       wheel: e => {
+        if (!$("body").hasClass('locked')) {
         const deltaY = e.originalEvent.deltaY;
         const direction = deltaY > 0 ? "next" : "prev";
         scrollViewport(direction);
+        }
       },
       keydown: e => {
+        if (!$("body").hasClass('locked')) {
         const tagName = e.target.tagName.toLowerCase();
         const userTypingInInputs = tagName === "input" || tagName === "textarea";
         
@@ -82,9 +85,9 @@ $(document).ready(function () {
           break;
         }
       }
+      }
     });
-  }
-  
+    
   $("[data-scroll-to]").on("click", e => {
     e.preventDefault();
     performTransition(parseInt($(e.currentTarget).attr("data-scroll-to")));
@@ -102,12 +105,12 @@ $(document).ready(function () {
       
       $("body").swipe({
         swipe: (event, direction) => {
+          if (!$("body").hasClass('locked')) {
           let scrollDirection;
           if (direction === "up") scrollDirection = "next";
           if (direction === "down") scrollDirection = "prev";
           scrollViewport(scrollDirection);
-          
-          
+          }          
         }
       });
     }
