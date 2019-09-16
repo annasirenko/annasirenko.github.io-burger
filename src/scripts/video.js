@@ -42,9 +42,10 @@ $().ready(function(){
     // обрабатываем окончание видео
     video.addEventListener('ended', function (){
       $('.video__play').toggleClass('video__play--active');
+      $('.duration__icon').removeClass('active')
       video.currentTime=0;
     }, false);
-
+    
 });
 
 function playStop() {
