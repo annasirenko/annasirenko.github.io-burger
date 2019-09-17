@@ -42,8 +42,11 @@ $().ready(function(){
     // обрабатываем окончание видео
     video.addEventListener('ended', function (){
       $('.video__play').toggleClass('video__play--active');
-      $('.duration__icon').removeClass('active')
       video.currentTime=0;
+      durationControl.value=0;
+      video.pause();
+      clearInterval(intervalId);
+      $('.duration__icon').removeClass('active');
     }, false);
     
 });
