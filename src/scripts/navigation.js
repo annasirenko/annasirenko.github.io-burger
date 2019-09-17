@@ -15,6 +15,7 @@ function closeHamburgerMenu(){
   hamburger.classList.remove('is-active');
   body.style.overflow = 'auto';
   
+  
 
 }
 
