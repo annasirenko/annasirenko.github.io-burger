@@ -44,6 +44,8 @@ hamburger.addEventListener('click', function(e) {
 
   });
 
+  
+
 
 
   // for (let i=0; i<menuItems.length; i++){

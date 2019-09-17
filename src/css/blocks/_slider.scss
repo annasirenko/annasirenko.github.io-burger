@@ -150,6 +150,11 @@ a.popup{
   height: rem(20px);
   margin-left: rem(30px);
   display: none; 
+  height: rem(20px);
+  // margin-left: rem(30px);
+  @include tablets{
+    // display: block; 
+  }
 }
 
 .popup__list {
@@ -182,15 +187,7 @@ a.popup{
   font-weight: 300;
 }
 
-.popup__exit {
-  height: rem(20px);
-  // margin-left: rem(30px);
-  @include tablets{
-    display: block; 
-  }
-  
-  
-}
+
 
 .cross-pic{
   height: rem(20px);
