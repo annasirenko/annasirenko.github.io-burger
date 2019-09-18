@@ -1,0 +1,203 @@
+.order {
+    background: url('./img/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg') center center / cover no-repeat;
+    color: #fff;
+}
+
+
+
+.form__elem {
+    display: flex;
+    align-items: flex-start;
+    
+}
+    
+
+
+.form__column {
+    flex: 1;
+    margin-right: rem(20px);
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__row {
+    display: flex;
+    margin-top: rem(20px);
+    &:first-child{
+        margin-top: 0;
+    }
+}
+
+.form__block {
+    flex: 1;
+    margin-right: rem(20px);
+    display: block;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+
+
+.form__content {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 600px;
+}
+
+.form__input {
+    background: #fff;
+    border-radius: 3px;
+    border: 2px solid #fff;
+    padding: rem(8px) rem(21px);
+    width: 100%;
+    font-family: $ubuntu;
+    font-size: rem(14px);
+    font-weight: 300;
+    color: $grey;
+    &--textarea {
+        resize: none;
+        height: rem(110px);
+    }
+    &:focus {
+        border-color: $orange;
+        border-radius: 3px;
+        outline: none
+    }
+}
+
+.form__block-title {
+    color: #fff;
+    font-size: rem(14px);
+    font-family: $ubuntu;
+    font-weight: 300;
+    margin-bottom: rem(7px);
+}
+
+.form__block--radiocheck {
+    display: flex;
+}
+
+.form__radio {
+    position: relative;
+    margin-bottom: 0;
+}
+
+.form__trueradio {
+    visibility: hidden;
+}
+
+.form__block--radio {
+    margin-left: rem(10px);
+}
+
+.form__fakeradio {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    background: #ffffff;
+    display: block;
+    &:before {
+        content: "";
+        height: 7px;
+        width: 7px;
+        background-color: $ginger;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto auto;
+        visibility: hidden;
+    }
+}
+
+.form__fakedot {
+    height: 7px;
+    width: 7px;
+    background-color: $ginger;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto auto;
+    visibility: hidden;
+}
+
+.form__fakeradio--checkbox {
+    border-radius: 0%;
+    height: 16px;
+    width: 16px;
+    &:before {
+        background: url(./img/check_mark.png) no-repeat;
+        height: 100%;
+        width: 100%;
+        background-position: center center
+    }
+}
+
+.form__trueradio:checked~.form__fakeradio:before {
+    visibility: visible;
+    
+}
+
+@include tablets {
+    .order {
+        text-align: center;
+    }
+    .form__elem {
+        flex-direction: column;
+        padding: 0 17%;
+        text-align: left;
+    }
+    
+    .form__column {
+        margin: 0;
+        width: 100%;
+        margin-bottom: 1rem;
+        
+    }
+}
+
+@include phones {
+    .form__elem {
+        padding: 0;
+        text-align: center
+    }
+    .form__block {
+        
+        &:nth-child(4) {
+            display: none
+        }
+        &:nth-child(3) {
+            margin-right: 0;
+        }
+    }
+    .form__row{
+        margin-top: .55rem;
+    }
+    
+    .form__column {
+        width: 100%;
+        margin-bottom: .5rem;
+        
+    }
+    .form__block-title {
+        text-align: left
+    }
+    // .form__input--textarea {
+    //     margin-bottom: 3%;
+    // }
+    .form__block--radiocheck {
+        justify-content: center;
+        
+    }
+}

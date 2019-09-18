@@ -1,0 +1,132 @@
+button {
+    text-decoration: none;
+    border: 0;
+    font: inherit;
+    cursor: pointer;
+    color: inherit;
+    background-color: transparent;
+    &:focus {
+        outline: none
+    }
+}
+
+.button {
+    font-family: $ubuntu;
+    font-size: 0.812rem;
+    font-weight: 500;
+    padding: rem(13px);
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.order__button-send {
+    font-family: $ubuntu;
+    font-size: 0.812rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: rem(11px) rem(17px);
+    border-radius: 4px;
+    background-color: $ginger;
+    text-transform: uppercase;
+    transition: .3s linear;
+    &:hover {
+        background-color: #c1401e;
+    }
+}
+
+// .form__button-send {
+//     font-family: $ubuntu;
+//     font-size: 0.812rem;
+//     font-weight: 500;
+//     text-decoration: none;
+//     padding: rem(11px) rem(17px);
+//     border-radius: 4px;
+//     background-color: $ginger;
+//     text-transform: uppercase;
+//     transition: .3s linear;
+//     &:hover {
+//         background-color: #c1401e;
+//     }
+// }
+
+
+.btn__scroll {
+    width: rem(29px);
+    height: rem(14px);
+    // background: url('../img/arrow-scroll.png') center center / contain no-repeat;
+    display: flex;
+    justify-content: center;
+    margin-top: rem(82px);
+    display: block;
+    position: absolute;
+    bottom: rem(42px);
+    left: 49%;
+    transform: translateX(-50%);
+    animation: animated 1.7s infinite ease;
+
+}
+
+@keyframes animated {
+    0% {
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-7px);
+    }
+
+    55%{
+        transform: translateY(-7px);
+    }
+    
+
+    100% {
+        transform: translateY(0);
+    }
+
+
+}
+
+.comments-btn {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    font-family: $ubuntu;
+    background-color: $grey;
+    padding: rem(11px) rem(16px);
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: .3s linear;
+    &:hover {
+        background-color: #1f2122;
+    }
+    &:after {
+        content: "читать отзыв";
+        // position: absolute;
+        left: 3.6rem;
+        display: none
+    }
+    &:before{
+        content: "подробнее";
+        display: inline;
+        color: #fff;
+        @include phones{
+            color: transparent;
+            display: none;
+        }
+    }
+    @include phones {
+        color: transparent;
+        &:after {
+            display: inline-block;
+            color: #fff
+            
+        }
+}
+}
+
+.slider-button{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}

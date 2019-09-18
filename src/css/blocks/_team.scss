@@ -1,0 +1,189 @@
+.team {
+  position: relative;
+  background: url('./img/team.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.team__aside{
+  position: absolute;
+  right: 0;
+  left: 50%;
+  height: 100vh;
+  padding: 8%;
+  top: 0;
+  min-height: 600px;
+  background: rgba(49, 52, 54, 0.9);
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: space-around;
+}
+
+.team__block{
+  // height: 100vh;
+  // min-height: rem(525px);
+ 
+  @include tablets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+  }
+ 
+  
+}
+
+.team__title{
+  font-family: $gagalin;
+    color: $orange;
+    font-size: 4.0625rem;
+    font-weight: 400;
+    text-decoration: uppercase;
+    //  margin-bottom: 30px;
+    //  margin-top: 125px;
+    // margin-top: rem(55px);
+    letter-spacing: rem(4px);
+    @include tablets{
+      margin-bottom: rem(55px);
+    }
+    @include phones{
+      font-size: rem(49px);
+      margin-top: 0;
+      margin-bottom: 0;
+      
+    }
+}
+
+
+.accordeon__name{
+  color: #ffffff;
+  font-family: $gagalin;
+  font-size: rem(14px);
+  font-weight: 400;
+  text-transform: uppercase;
+  position: relative;
+    &:before {
+      content: "";
+      height: 7px;
+      width: 9px;
+      margin-right: rem(9px);
+      // color: $orange;
+      overflow: hidden;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 6px solid $orange;
+      right: 100%;
+      top: rem(6px);
+      @include tablets{
+        top: 1rem;
+      }
+           
+  }
+}
+
+.accordeon__team{
+  margin-top: rem(35px);
+  & .accordeon__about{
+    height: 0;
+    overflow: hidden;
+    transition: height .2s linear;
+  }
+
+  &--active .accordeon__about{
+    height: rem(100px);
+    overflow: visible;
+  @include tablets{
+    height:14.25rem;
+  }
+  }
+  
+}
+
+.accordeon__team--active .accordeon__name {
+  color: $orange;
+  // height: rem(100px);
+  overflow: visible;
+  &:before {
+      border-bottom: 6px solid $orange;
+      border-top: 0;
+      
+  }
+}
+
+.accordeon__about{
+  color: #ffffff;
+  font-family: $ubuntu;
+  font-size: rem(14px);
+  font-weight: 300;
+  display: flex;
+  padding-top: rem(17px);
+  padding-left: rem(17px);
+  // height: 0;
+  // overflow: hidden;
+}
+
+// .accordeon__about--active{
+//   height: 100%;
+//   overflow: visible;
+// }
+
+.accordeon-pic {
+  overflow: hidden;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.accordeon__memberpic {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.accordeon__desc {
+  max-width: rem(208px);
+  margin-left: rem(17px);
+}
+
+.desc__worker{
+  font-weight: bold;
+}
+
+.desc__help{
+  margin-top: rem(17px);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px){
+  .team__aside {
+    left: 0;
+    // width: 100%;
+    
+  }
+  
+  .accordeon__about{
+    flex-direction: column;
+    margin-right: rem(18px);
+  }
+  .accordeon{
+    text-align: center;
+  }
+  .accordeon-pic{
+    margin: 0 auto;
+  }
+  .accordeon__name{
+    font-size: rem(24px);
+  }
+  .accordeon__desc {
+    margin-left: 0;
+  }
+  .desc__worker{
+    margin-top: rem(15px);
+  }
+}
